@@ -1,0 +1,237 @@
+let donutElement = document.querySelector(".donut");;
+let donutSprite = document.querySelector(".donut img");
+let x;
+let y;
+
+donutRandomPosition();
+let clickSFX = document.querySelector(".click-sfx");
+
+let energy = 0n;
+let energyElement = document.querySelector(".energy-text");
+
+let currentDonut = 0;
+let nextDonutPrice = 25n;
+let nextDonutPriceTag = document.getElementById("donutPriceTag");
+let nextDonutSprite = document.querySelector(".donut-image img");
+let nextDonutNumber = document.getElementById("donutNumber");
+let nextDonutName = document.querySelector(".donut-info h2");
+let nextDonutDescription = document.querySelector(".donut-image p");
+let donutPurchase = document.querySelector(".donut-info button");
+
+let openMenuSFX = document.querySelector(".open-menu-sfx");
+let closeMenuSFX = document.querySelector(".close-menu-sfx");
+
+let buySFX = document.querySelector(".buy-sfx");
+let poorSFX = document.querySelector(".poor-sfx");
+
+let devMode = false;
+let devButton = document.querySelector(".dev-mode");
+
+let mouseDown = false;
+
+let upgradeOwned = []
+let upgradeStat = {
+    "clickType": 0, // 1 hold down mouse, 2 no click required
+    "doubleChance": 0.0, // 0.0-1.0 double clicks, 1.0-2.0 triple clicks
+    "homesickChance": 0.0, // 0.0-1.0 close chance, 1.0-2.0 rock chance
+    "stormCharge": 100,
+    "stormClicks": 0,
+    "diceChance": 1,
+    "diceClickChance": 0.0
+}
+
+const DirDonutSprites = "assets/img/donuts/"
+
+function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max)
+};
+
+function suffix(value, zeros, suffix ,prefix) {
+    const compare = 1000n ** BigInt(zeros);
+
+    const scaled = (value * 100n) / compare;
+    const str = scaled.toString();
+
+    const whole = str.length > 2 ? str.slice(0,-2) : "0";
+    const decimal = str.length > 2 ? str.slice(-2) : str.padStart(2, "0");
+    const trimmedDecimal = decimal.replace(/0+$/, "");
+
+    return (
+        prefix +
+        whole +
+        (trimmedDecimal ? "." + trimmedDecimal : "") +
+        suffix
+    );
+};
+
+function formatNumber(text) {
+    const num = BigInt(text);
+    const neg = num < 0n;
+    const prefix = neg ? "-" : "";
+    const absolute = neg ? -num : num;
+
+    if (absolute >= 1_000_000_000_000_000_000_000_000_000_000_000n) {return suffix(absolute,11,"d",prefix)};
+    if (absolute >= 1_000_000_000_000_000_000_000_000_000_000n) {return suffix(absolute,10,"n",prefix)};
+    if (absolute >= 1_000_000_000_000_000_000_000_000_000n) {return suffix(absolute,9,"o",prefix)};
+    if (absolute >= 1_000_000_000_000_000_000_000_000n) {return suffix(absolute,8,"S",prefix)};
+    if (absolute >= 1_000_000_000_000_000_000_000n) {return suffix(absolute,7,"s",prefix)};
+    if (absolute >= 1_000_000_000_000_000_000n) {return suffix(absolute,6,"Q",prefix)};
+    if (absolute >= 1_000_000_000_000_000n) {return suffix(absolute,5,"q",prefix)};
+    if (absolute >= 1_000_000_000_000n) {return suffix(absolute,4,"t",prefix)};
+    if (absolute >= 1_000_000_000n) {return suffix(absolute,3,"b",prefix)};
+    if (absolute >= 1_000_000n) {return suffix(absolute,2,"m",prefix)};
+    if (absolute >= 1_000n) {return suffix(absolute,1,"k",prefix)};
+
+    return prefix + absolute.toString();
+}
+
+function updateCounter() {
+    energyElement.innerHTML = formatNumber(energy)
+
+    const holdDuration = energyElement.style.transitionDuration
+    const holdFontSize = energyElement.style.fontSize
+
+    energyElement.style.transitionDuration = "0s"
+    energyElement.style.fontSize = "150px"
+    energyElement.offsetHeight;
+
+    energyElement.style.transitionDuration = holdDuration
+    energyElement.style.fontSize = holdFontSize
+};
+
+function updateDonut() {
+    const nextDonut = currentDonut + 1;
+
+    nextDonutNumber.innerHTML = nextDonut + 1;
+    nextDonutPriceTag.innerHTML = formatNumber(nextDonutPrice);
+
+    fetch("donuts.json")
+        .then(response => response.json())
+        .then(data => {
+            const curSprite = data[currentDonut]["file"]
+            const nxtSprite = data[nextDonut]["file"]
+            const nxtName = data[nextDonut]["name"]
+            const nxtDesc = data[nextDonut]["description"]
+
+            console.log("Current donut:",curSprite,", Next donut:",nxtName)
+
+            donutSprite.src = DirDonutSprites + curSprite + ".svg";
+            nextDonutSprite.src = DirDonutSprites + nxtSprite + ".svg";
+            nextDonutName.textContent = nxtName;
+            nextDonutDescription.textContent = nxtDesc;
+        }).catch(err => console.error(err));
+};
+
+function closeMenu(menu) {
+    const menuColor = document.querySelector(`div.${menu}`);
+    const menuParent = menuColor.parentElement;
+    menuParent.classList.remove("active");
+};
+
+function donutRandomPosition() {
+    const offsetWidth = donutSprite.width / 2
+    const offsetHeight = donutSprite.height / 2
+
+    x = Math.random() * (window.innerWidth - offsetWidth);
+    y = Math.random() * (window.innerHeight - offsetHeight);
+
+    const clampX = offsetWidth * 3
+    const clampY = offsetHeight * 3
+
+    x = clamp(x, clampX, window.innerWidth - clampX)
+    y = clamp(y, clampY, window.innerHeight - clampY)
+
+    donutElement.style.left = `${x}px`;
+    donutElement.style.top = `${y}px`;
+};
+
+function clickDonut() {
+    donutRandomPosition()
+    
+    energy += BigInt(currentDonut + 1)
+
+    updateCounter()
+
+    clickSFX.currentTime = 0;
+    clickSFX.play();
+};
+
+document.querySelectorAll(".menus button").forEach(btn => {
+    btn.addEventListener("click", () => {
+        openMenuSFX.currentTime = 0;
+        openMenuSFX.play();
+        
+        const btnCode = [...btn.classList].find(className => className.endsWith("Coded"));
+        const btnMenuColor = document.querySelector(`div.${btnCode}`);
+        const btnMenu = btnMenuColor.parentElement;
+        btnMenu.classList.add("active");
+
+        updateDonut()
+    });
+});
+
+document.querySelectorAll(".menu-return").forEach(btn => {
+    btn.addEventListener("click", () => {
+        closeMenuSFX.currentTime = 0;
+        closeMenuSFX.play();
+
+        const btnCode = [...btn.classList].find(className => className.endsWith("Coded"));
+        closeMenu(btnCode)
+    });
+});
+
+function buyNextDonut() {
+    updateDonut()
+    if (energy >= nextDonutPrice || devMode) {
+        buySFX.currentTime = 0;
+        buySFX.play();
+
+        energy -= nextDonutPrice;
+        nextDonutPrice = (nextDonutPrice * 1459n) / 1000n;
+        currentDonut ++;
+
+        updateCounter();
+        updateDonut();
+
+        if (!devMode) {closeMenu("donutCoded")};
+    } else {
+        poorSFX.currentTime = 0
+        poorSFX.play()
+    };
+};
+
+function toggleDevMode() {
+    devButton.classList.toggle("active");
+    devMode = devButton.classList.contains("active");
+    console.log(devMode);
+    if (devMode) {
+        openMenuSFX.currentTime = 0;
+        openMenuSFX.play()
+    } else {
+        closeMenuSFX.currentTime = 0;
+        closeMenuSFX.play()
+    }
+}
+
+function purchaseHover() {
+    if (energy >= nextDonutPrice) {
+        donutPurchase.classList.add("rich");
+    } else {
+        donutPurchase.classList.add("poor");
+    };
+};
+
+function purchaseUnhover() {
+    donutPurchase.classList.remove("rich")
+    donutPurchase.classList.remove("poor")
+};
+
+function donutHover() {
+    if (clickType === 2) {
+        clickDonut();
+    } else if (clickType && mouseDown) {
+        clickDonut();
+    };
+}
+
+updateDonut();

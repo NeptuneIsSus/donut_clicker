@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <audio src="assets/sfx/click.wav" class="click-sfx"></audio>
+    <audio src="assets/sfx/open.wav" class="open-menu-sfx"></audio>
+    <audio src="assets/sfx/close.wav" class="close-menu-sfx"></audio>
+    <audio src="assets/sfx/buy.wav" class="buy-sfx"></audio>
+    <audio src="assets/sfx/poor.wav" class="poor-sfx"></audio>
+    
+    <section class="energy">
+        <h1 class="energy-text">0</h1>
+    </section>
+
+    <section class="menus">
+        <div>
+            <button id="achievementsButton" class="achievementsCoded">
+                <b>Achieve</b>
+            </button>
+            <button id="settingsButton" class="settingsCoded">
+                <b>Setting</b>
+            </button>
+        </div>
+        <div>
+            <button id="upgradeButton" class="upgradeCoded">
+                <b>Upgrad</b>
+            </button>
+            <button id="donutButton" class="donutCoded">
+                <b>Donut</b>
+            </button>
+        </div>
+    </section>
+
+
+
+    <section id="achievementsBox" class="menu-box">
+        <div class="achievementsCoded menu-box-color">
+            Pretend there is text here
+            <button class="menu-return achievementsCoded"><b>Back</b></button>
+        </div>
+    </section>
+
+    <section id="settingsBox" class="menu-box">
+        <div class="settingsCoded menu-box-color">
+            <button class="dev-mode" onclick="toggleDevMode()"><b>Dev Mode</b></button>
+            <button class="menu-return settingsCoded"><b>Back</b></button>
+        </div>
+    </section>
+
+    <section id="upgradeBox" class="menu-box">
+        <div class="upgradeCoded menu-box-color">
+            Pretend there is text here
+            <button class="menu-return upgradeCoded"><b>Back</b></button>
+        </div>
+    </section>
+
+    <section id="donutBox" class="menu-box">
+        <div class="donutCoded menu-box-color">
+            <h1>Level Up Donut</h1>
+            <div class="donut-div">
+                <div class="donut-info">
+                    <p>Donut #<span id="donutNumber">2</span></p>
+                    <h2>Powdered Donut</h2>
+                    <p>Cost: <span id="donutPriceTag">30</span> Energy</p>
+                    <button class="donut-purchase" onclick="buyNextDonut()" onmouseover="purchaseHover()" onmouseout="purchaseUnhover()"><b>$$$$$$$</b></button>
+                </div>
+                <div class="donut-image">
+                    <img src="assets/img/donuts/white powder.svg" alt="Next Donut" srcset="" draggable="false">
+                    <p>Guy who made this was like "man, I sure wish these powdered donuts were chocolate flavored"</p>
+                </div>
+            </div>
+            <button class="menu-return donutCoded"><b>Back</b></button>
+        </div>
+    </section>
+
+
+
+    <div class="donut">
+        <img src="assets/img/donuts/donut.svg" alt="" srcset="" onclick="clickDonut()" draggable="false">
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

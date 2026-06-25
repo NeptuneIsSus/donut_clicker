@@ -1,0 +1,113 @@
+[
+    {
+        "name": "Doubler",
+        "description": "Improves the chance to double click the donut",
+        "levels": 5,
+        "tier": 0,
+        "file": "double",
+        "var": "doubleChance",
+        "value": 0.2,
+        "change": true,
+        "requires": []
+    },{
+        "name": "Homesick",
+        "description": "Improves the chance for the donut to not move far when clicked",
+        "levels": 5,
+        "tier": 0,
+        "file": "homesick",
+        "var": "homesickChance",
+        "value": 0.2,
+        "change": true,
+        "requires": []
+    },{
+        "name": "Clicker Storm",
+        "description": "Every 100 clicks, causes a storm of mice to click the donut",
+        "levels": 1,
+        "tier": 0,
+        "file": "storm",
+        "var": "stormClicks",
+        "value": 10,
+        "change": false,
+        "requires": []
+    },{
+        "name": "Clicker League",
+        "description": "Decreases the clicks needed to activate the storm",
+        "levels": 4,
+        "tier": 1,
+        "file": "stormer",
+        "var": "stormCharge",
+        "value": -15,
+        "change": true,
+        "requires": [2]
+    },{
+        "name": "Donut Ninja",
+        "description": "Instead of clicking, you only have to hold down the mouse button",
+        "levels": 1,
+        "tier": 0,
+        "file": "ninja",
+        "var": "clickType",
+        "value": 1,
+        "change": false,
+        "requires": []
+    },{
+        "name": "Razor Sharp Mouse",
+        "description": "You slice the donut by simply hovering it, no clicking required",
+        "levels": 1,
+        "tier": 2,
+        "file": "razor",
+        "var": "clickType",
+        "value": 2,
+        "change": false,
+        "requires": [4]
+    },{
+        "name": "Tripler",
+        "description": "Adds a chance to triple click as opposed to double",
+        "levels": 4,
+        "tier": 5,
+        "file": "triple",
+        "var": "doubleChance",
+        "value": 0.25,
+        "change": true,
+        "requires": [0]
+    },{
+        "name": "Stoned Nut",
+        "description": "Adds a chance for the donut to not move at all",
+        "levels": 4,
+        "tier": 5,
+        "file": "stone",
+        "var": "homesickChance",
+        "value": 0.25,
+        "change": true,
+        "requires": [1]
+    },{
+        "name": "Roll the Dice",
+        "description": "You slice the donut by simply hovering it, no clicking required",
+        "levels": 1,
+        "tier": 1,
+        "file": "dice",
+        "var": "diceWait",
+        "value": 1,
+        "change": false,
+        "requires": []
+    },{
+        "name": "Dice Bag",
+        "description": "You slice the donut by simply hovering it, no clicking required",
+        "levels": 2,
+        "tier": 3,
+        "file": "dicer",
+        "var": "diceWait",
+        "value": -0.35,
+        "change": true,
+        "requires": [8]
+    },{
+        "name": "Die Mice",
+        "description": "You slice the donut by simply hovering it, no clicking required",
+        "levels": 1,
+        "tier": 2,
+        "file": "razor",
+        "var": "diceClickChance",
+        "value": 0.01,
+        "change": false,
+        "requires": [4]
+    }
+]
