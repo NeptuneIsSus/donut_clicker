@@ -2,554 +2,829 @@
     {
         "name": "Donut",
         "file": "donut",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Powdered Donut",
         "file": "white powder",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "The beginning of a long journey",
+        "font": "Fancy"
+    },
+    {
         "name": "Frosted White",
         "file": "white frost",
-        "description": "I'm pretty sure the frosting is vanilla flavored, never checked myself though"
-    },{
+        "description": "I'm pretty sure the frosting is vanilla flavored, never checked myself though",
+        "font": "Fancy"
+    },
+    {
         "name": "Frosted Chocolate",
         "file": "choco frost",
-        "description": "The beginning of a chocolate journey"
-    },{
+        "description": "The beginning of a chocolate journey",
+        "font": "Fancy"
+    },
+    {
         "name": "No-Hole Donut",
         "file": "holeless",
-        "description": "FYI this donut is not filled, it is simply a donut without a purpose"
-    },{
+        "description": "FYI this donut is not filled, it is simply a donut without a purpose",
+        "font": "Fancy"
+    },
+    {
         "name": "White Sprinkled",
         "file": "white sprinkle",
-        "description": "Despite sprinkles being nothing but sugar, they make the donut taste to much better"
-    },{
+        "description": "Despite sprinkles being nothing but sugar, they make the donut taste to much better",
+        "font": "Fancy"
+    },
+    {
         "name": "Chocolate Sprinkled",
         "file": "choco sprinkle",
-        "description": "Arguably the most popular donut to ever exist, according to me"
-    },{
+        "description": "Arguably the most popular donut to ever exist, according to me",
+        "font": "Fancy"
+    },
+    {
         "name": "Glazed",
         "file": "glaze",
-        "description": "The kind of donut you always see but never try, or is that just me..."
-    },{
+        "description": "The kind of donut you always see but never try, or is that just me...",
+        "font": "Fancy"
+    },
+    {
         "name": "Chocolate Powdered",
         "file": "choco powder",
-        "description": "Guy who made this was like \"man, I sure wish these powdered donuts were chocolate flavored\""
-    },{
+        "description": "Guy who made this was like \"man, I sure wish these powdered donuts were chocolate flavored\"",
+        "font": "Fancy"
+    },
+    {
         "name": "Jelly Donut",
         "file": "filled jelly",
-        "description": "Don't ask me what flavor the jelly is, it's probably grape flavored idk"
-    },{
+        "description": "Don't ask me what flavor the jelly is, it's probably grape flavored idk",
+        "font": "Fancy"
+    },
+    {
         "name": "Long John",
         "file": "choco long",
-        "description": "One of those donut poster-children, but it's literally just Frosted Chocolate stretched out"
-    },{
+        "description": "One of those donut poster-children, but it's literally just Frosted Chocolate stretched out",
+        "font": "Fancy"
+    },
+    {
         "name": "Crumble Crave",
         "file": "crumble",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "You'd be lucky if EVERYTHING YOU ARE isn't covered in crumbs by the end of this",
+        "font": "Fancy"
+    },
+    {
         "name": "Caramel Dip",
         "file": "dip caramel",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "\"Sir, I thought we were only supposed to dip the apples in caramel\" SILENCE PEASANT",
+        "font": "Fancy"
+    },
+    {
         "name": "Donut Hole",
         "file": "hole",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "You have your hole life ahead of you, so why not make the most of it",
+        "font": "Fancy"
+    },
+    {
         "name": "Glazed Donut Hole",
         "file": "hole glaze",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "Don't expect others to glaze you for your success, it only makes them less willing",
+        "font": "Fancy"
+    },
+    {
         "name": "Powdered Donut Hole",
         "file": "hole powder",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "With the powder of friendship, anything can be possible",
+        "font": "Fancy"
+    },
+    {
         "name": "Chocolate Glazed Donut Hole",
         "file": "hole choco",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "Maybe the true Chocolate Glazed Donut Holes were the friends we made along the way",
+        "font": "Fancy"
+    },
+    {
         "name": "Chocolate Glazed Donut",
         "file": "choco glaze",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "If you think this is a lot of chocolate, boy do I have a few things to show you",
+        "font": "Fancy"
+    },
+    {
         "name": "White Jimmy",
         "file": "white long",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "Long John's older brother Jimmy, he's pretty chill I'd argue",
+        "font": "Fancy"
+    },
+    {
         "name": "Chocolate Filling",
         "file": "filled choco",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "Gosh I could really go for some chocolate fudge right now... Oh would you look at that",
+        "font": "Fancy"
+    },
+    {
         "name": "Naked Sprinkled",
         "file": "naked sprinkle",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "AHHH HES NAKED! COVER THE CHILDRENS' EYES! CALL THE COPS!",
+        "font": "Fancy"
+    },
+    {
         "name": "Jimmy Sprinkles",
         "file": "white long sprinkle",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "Thank goodness you're here, Jimmy. The craziest thing happened, there was like this naked guy",
+        "font": "Fancy"
+    },
+    {
         "name": "John Sprinkles",
         "file": "choco long sprinkle",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "Dangggg you wear those sprinkles good, John! You should become a fashion designer",
+        "font": "Fancy"
+    },
+    {
         "name": "Sprinkled Caramel Dip",
         "file": "dip caramel sprinkle",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "Caramel I know gosh darn well you're only wearing those sprinkles because everyone else is",
+        "font": "Fancy"
+    },
+    {
         "name": "Bronze Donut",
         "file": "super bronze",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "Congradualtions on acquiring 25 different kinds of donuts! Enjoy this bronze med- I mean donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Apple Strudel",
         "file": "filled apple",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "Crumble Crave if it was actually good, bro this is literally 'Apple Pie: The Donut'",
+        "font": "Fancy"
+    },
+    {
         "name": "No-Hole Powdered",
         "file": "holeless powder",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "Are these even donuts anymore? WHO ARE YOU? WHAT DO YOU WANT?",
+        "font": "Fancy"
+    },
+    {
         "name": "No-Hole Sprinkled",
         "file": "holeless sprinkle",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "Looks like somebody forgot to put their lipstick on~ Wait... what is the human variant of frosting?",
+        "font": "Fancy"
+    },
+    {
         "name": "No-Hole Chocolate",
         "file": "holeless choco",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "Not to be confused with Boston Creme, this one lacks the iconic Creme",
+        "font": "Fancy"
+    },
+    {
         "name": "Creme Filling",
         "file": "filled creme",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "Not to be confused with Boston Creme, this one lacks the iconic... Boston...",
+        "font": "Fancy"
+    },
+    {
         "name": "Valentine",
         "file": "valentine",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "Be sure to give this one to someone you care about, or eat it yourself you biggie",
+        "font": "Fancy"
+    },
+    {
         "name": "Love Donut",
         "file": "love",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "Don't let it fool you... this is just the Strawberry Donut shaped like a heart, nothing more",
+        "font": "Fancy"
+    },
+    {
         "name": "Trick or Treat",
         "file": "trick",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "You know you wish those sprinkles were Peanut Butter flavored. But deep down, you know they're just sugar",
+        "font": "Fancy"
+    },
+    {
         "name": "Pumpkin Surprise",
         "file": "filled pumpkin",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "Gosh I sure do wonder what the surprise is! Could be butterscotch perhaps?",
+        "font": "Fancy"
+    },
+    {
         "name": "Snowball",
         "file": "snow",
-        "description": "The beginning of a long journey"
-    },{
+        "description": "Boy they sure love their seasonals... Do these even make that many sales? I've rarely gotten them myself",
+        "font": "Fancy"
+    },
+    {
         "name": "Ho Ho Hole!",
         "file": "hole snow",
-        "description": "Your first donut"
-    },{
+        "description": "Anytime you feel down, just snow that I'm always here for you",
+        "font": "Fancy"
+    },
+    {
         "name": "Saint Patrick's Donut",
         "file": "patrick",
-        "description": "Your first donut"
-    },{
+        "description": "FYI this is NOT Patrick's donut, last I checked that dude HATED the color green",
+        "font": "Fancy"
+    },
+    {
         "name": "Sunset Sprinkles",
         "file": "sunset",
-        "description": "Your first donut"
-    },{
-        "name": "Berry Blasr",
+        "description": "Ngl I'd love to try this donut, it looks like it's berry flavored",
+        "font": "Fancy"
+    },
+    {
+        "name": "Berry Blast",
         "file": "berry",
-        "description": "Your first donut"
-    },{
+        "description": "Well speak of the devil, if it isn't the actual berry flavor",
+        "font": "Fancy"
+    },
+    {
         "name": "Boston Creme",
         "file": "filled boston",
-        "description": "Your first donut"
-    },{
+        "description": "The fillings of Boston Creme fill you with Determination, or is that just more Boston Creme I'm filled with",
+        "font": "Fancy"
+    },
+    {
         "name": "Jelly Dip",
         "file": "dip jelly",
-        "description": "Your first donut"
-    },{
+        "description": "Jeeze we gotta stop dipping these donuts in such sticky substances, they're way too messy",
+        "font": "Fancy"
+    },
+    {
         "name": "Triple Choc Dare",
         "file": "choco triple",
-        "description": "Your first donut"
-    },{
+        "description": "THIS... IS TO GO... EVEN... FURTHER... BEYOND... RAHHHHHHHHHHH!!!!!",
+        "font": "Fancy"
+    },
+    {
         "name": "Zebra Donut",
         "file": "zebra",
-        "description": "Your first donut"
-    },{
+        "description": "Made with real chocolate and vanilla, 100% zebra free this time",
+        "font": "Fancy"
+    },
+    {
         "name": "Half Sprinkle",
         "file": "half sprinkle",
-        "description": "Your first donut"
-    },{
+        "description": "WHO THOUGHT THIS WAS A GOOD IDEA????",
+        "font": "Fancy"
+    },
+    {
         "name": "Cookie Dough-nut",
         "file": "cookie",
-        "description": "Your first donut"
-    },{
+        "description": "Eyyyy? See what I did there ;) ? Thank you thank you, I'm here all week",
+        "font": "Fancy"
+    },
+    {
         "name": "Mint Chocolate Chip",
         "file": "mint",
-        "description": "Your first donut"
-    },{
+        "description": "That's... a donut flavor now? Welp, might as well try one",
+        "font": "Fancy"
+    },
+    {
         "name": "American",
         "file": "america",
-        "description": "Your first donut"
-    },{
+        "description": "Mmmmmm, Aluminum spray paint flavor, my favorite!",
+        "font": "Fancy"
+    },
+    {
         "name": "Neapolitan",
         "file": "neapolitan",
-        "description": "Your first donut"
-    },{
+        "description": "So we're just doing ice cream flavors. AM I A JOKE TO YOU?",
+        "font": "Fancy"
+    },
+    {
         "name": "Rainbow Sprinkled",
         "file": "rainbow sprinkle",
-        "description": "Your first donut"
-    },{
+        "description": "Don't let the different, more colorful sprinkles fool you. It's still just sugar",
+        "font": "Fancy"
+    },
+    {
         "name": "Silver Donut",
         "file": "super silver",
-        "description": "Your first donut"
-    },{
+        "description": "You're at the 50 donut mark, you go girl! You're quite familiar with these donuts, aren't you",
+        "font": "Fancy"
+    },
+    {
         "name": "Eye Donut",
         "file": "eye",
-        "description": "Your first donut"
-    },{
+        "description": "Eye eat you~",
+        "font": "Fancy"
+    },
+    {
         "name": "White Rabbit",
         "file": "white rabbit",
-        "description": "Your first donut"
-    },{
+        "description": "Donut Clicker Tip: Don't follow the White Rabbit",
+        "font": "Fancy"
+    },
+    {
         "name": "Gun Donut",
         "file": "gun",
-        "description": "Your first donut"
-    },{
+        "description": "And just how did you get past donut security?",
+        "font": "Fancy"
+    },
+    {
         "name": "Blood Donut",
         "file": "blood",
-        "description": "Your first donut"
-    },{
+        "description": "P.S. NOT REAL BLOOD! It's actually ketchup",
+        "font": "Fancy"
+    },
+    {
         "name": "A wHole Donut!",
         "file": "whole donut",
-        "description": "Your first donut"
-    },{
+        "description": "You... Can't just... Do that??",
+        "font": "Fancy"
+    },
+    {
         "name": "Player Donut",
         "file": "player",
-        "description": "Your first donut"
-    },{
+        "description": "It's the Donut behind the slaughter!",
+        "font": "Fancy"
+    },
+    {
         "name": "Chocolate & Powdered",
         "file": "filled powder",
-        "description": "Your first donut"
-    },{
+        "description": "I've actually had one of these before, tastes pretty good ngl",
+        "font": "Fancy"
+    },
+    {
         "name": "Spider Donut",
         "file": "spider",
-        "description": "Your first donut"
-    },{
+        "description": "Made by Donuts, for Donuts, with Donuts",
+        "font": "Fancy"
+    },
+    {
         "name": "UwU Donut",
         "file": "uwu",
-        "description": "Your first donut"
-    },{
+        "description": "Look, some of these I made back in 2021, ok? I was a different person back then",
+        "font": "Fancy"
+    },
+    {
         "name": "Double-Nut",
         "file": "double frost",
-        "description": "Your first donut"
-    },{
+        "description": "Prepare for trouble! And make it double!",
+        "font": "Fancy"
+    },
+    {
         "name": "Double-Nut Sprinkled",
         "file": "double sprinkle",
-        "description": "Your first donut"
-    },{
+        "description": "Let's take this time to just reflect on how many donuts you've eaten by now, how are you still alive?",
+        "font": "Fancy"
+    },
+    {
         "name": "Frosted No-Hole",
         "file": "holeless frost",
-        "description": "Your first donut"
-    },{
+        "description": "The most \"I've never seen one, but it probably exists\" donut on this list",
+        "font": "Fancy"
+    },
+    {
         "name": "Ocean Blue",
         "file": "ocean",
-        "description": "Your first donut"
-    },{
+        "description": "I thought this was a soda flavor??? WAIT ARE THOSE TINY FISH GUMMIES",
+        "font": "Fancy"
+    },
+    {
         "name": "Donut... Again?!",
         "file": "donut 2",
-        "description": "Your first donut"
-    },{
+        "description": "Your sixty-fourth donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Flushed Donut",
         "file": "flushed",
-        "description": "Your first donut"
-    },{
+        "description": "Me when I see a cute Donut lady, yknow what I'm sayin? You wouldn't get it...",
+        "font": "Fancy"
+    },
+    {
         "name": "Dapper Donut",
         "file": "dapper",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Australian Donut",
         "file": "australia",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Anti-Donut",
         "file": "donut anti",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Devil Donut",
         "file": "devil",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Holy Donut",
         "file": "angel",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Steampunk Donut",
         "file": "steampunk",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Not Shaded Donut",
         "file": "unshaded",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Mohawk Donut",
         "file": "mohawk",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Bagel",
         "file": "bagel",
-        "description": "Your first bagel"
-    },{
+        "description": "Your first bagel",
+        "font": "Fancy"
+    },
+    {
         "name": "Pure Golden Donut",
         "file": "super gold",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Epic Donut",
         "file": "epic",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "King Donut",
         "file": "king",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Code Donut",
         "file": "code",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Donut Donut",
         "file": "ception",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Minecraft Donut",
         "file": "square",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Transparent Donut",
         "file": "glass",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "OwO Donut",
         "file": "owo",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Apple Donut",
         "file": "apple",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Diamond Donut",
         "file": "gem diamond",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Ruby Donut",
         "file": "gem ruby",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Emerald Donut",
         "file": "gem emerald",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Spinel Donut",
         "file": "gem spinel",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Peridot Donut",
         "file": "gem peridot",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Topaz Donut",
         "file": "gem topaz",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Citrine Donut",
         "file": "gem citrine",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Jasper Donut",
         "file": "gem jasper",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Onyx Donut",
         "file": "gem onyx",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Amethyst Donut",
         "file": "gem amethyst",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Turquiose Donut",
         "file": "gem turquoise",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Sapphire Donut",
         "file": "gem sapphire",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "White Opal Donut",
         "file": "gem opal",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Sappire Donut 2",
         "file": "gem sapphire2",
-        "description": "(I accidentally but sapphire in here twice, please replace before release)"
-    },{
+        "description": "(I accidentally but sapphire in here twice, please replace before release)",
+        "font": "Fancy"
+    },
+    {
         "name": "Alexandrite Donut",
         "file": "gem alex",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Tourmaline Donut",
         "file": "gem tourmaline",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Rainbow Donut",
         "file": "super rainbow",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Venus Donut",
         "file": "sbt venus",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Mars Donut",
         "file": "sbt mars",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Pluto Donut",
         "file": "sbt pluto",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Saturn Donut",
         "file": "sbt saturn",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Nova Donut",
         "file": "sbt nova",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Nebula Donut",
         "file": "sbt nebula",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Neptune Donut",
         "file": "sbt neptune",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Red Ronut",
         "file": "red",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Donuty",
         "file": "donuty",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Joey Donut",
         "file": "fnan joey",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Frankincense Donut",
         "file": "fnan frank",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Hankerchief Donut",
         "file": "fnan handker",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Arson Donut",
         "file": "fnan arson",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Ded Donut",
         "file": "dead",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Doreo",
         "file": "oreo",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Mr. Eye Donut",
         "file": "eye mr",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Floral Donut",
         "file": "floral",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Cact-o-Nut",
         "file": "cactus",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Donut Spinner",
         "file": "spinner",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Dough - No, too much frosting",
         "file": "extra frost",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Dough - No, too many sprinkles",
         "file": "extra sprinkle",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Donetta",
         "file": "donetta",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "sghaFasdjgasgDShjaihasHrajs;gr",
         "file": "spam",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Ignore that last one :)",
         "file": "ignore",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Copper Donut",
         "file": "super copper",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Tree Nut",
         "file": "tree",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Apple Tree Nut",
         "file": "tree apple",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Youtube Donut",
         "file": "youtube",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "TikTok Donut",
         "file": "tiktok",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Dionut",
         "file": "dio",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Taxes Donut",
         "file": "taxes",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Pumpkin Donut",
         "file": "pumpkin",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Donut Emoji",
         "file": "emoji",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Baldonut",
         "file": "baldi",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Scarlet Crimson",
         "file": "crimson",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Dot Nut King",
         "file": "dot king",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "Donutzart",
         "file": "motzart",
-        "description": "Your first donut"
-    },{
+        "description": "Your first donut",
+        "font": "Fancy"
+    },
+    {
         "name": "RGB Donut",
         "file": "rgb",
-        "description": "Your first donut"
+        "description": "Your first donut",
+        "font": "Fancy"
     }
 ]
