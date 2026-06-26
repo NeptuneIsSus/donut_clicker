@@ -452,7 +452,7 @@
     {
         "name": "Epic Donut",
         "file": "epic",
-        "description": "Despite the legally obtained sunglasses, this dude is pretty awesome",
+        "description": "Despite the illegally obtained sunglasses, this dude is pretty awesome",
         "font": "Cowboy"
     },
     {
@@ -576,9 +576,9 @@
         "font": "Rich"
     },
     {
-        "name": "Sappire Donut 2",
-        "file": "gem sapphire2",
-        "description": "(I accidentally but sapphire in here twice, please replace before release)",
+        "name": "Jade Donut",
+        "file": "gem jade",
+        "description": "Have you noticed yet how the upgrade backgrounds line up with these gems? Pretty cool huh",
         "font": "Rich"
     },
     {
@@ -776,7 +776,7 @@
     {
         "name": "Dionut",
         "file": "dio",
-        "description": "\"Waiter! There seems to be a Dio in my Donnut!\"",
+        "description": "\"Waiter! There seems to be a Dio in my Donut!\"",
         "font": "Fancy"
     },
     {
