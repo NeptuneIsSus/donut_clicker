@@ -3,13 +3,13 @@
         "name": "Donut",
         "file": "donut",
         "description": "Your first donut",
-        "font": "Fancy"
+        "font": "Homey"
     },
     {
         "name": "Powdered Donut",
         "file": "white powder",
         "description": "The beginning of a long journey",
-        "font": "Fancy"
+        "font": "Homey"
     },
     {
         "name": "Frosted White",
@@ -21,13 +21,13 @@
         "name": "Frosted Chocolate",
         "file": "choco frost",
         "description": "The beginning of a chocolate journey",
-        "font": "Fancy"
+        "font": "Cowboy"
     },
     {
         "name": "No-Hole Donut",
         "file": "holeless",
         "description": "FYI this donut is not filled, it is simply a donut without a purpose",
-        "font": "Fancy"
+        "font": "Hanukkah"
     },
     {
         "name": "White Sprinkled",
@@ -39,103 +39,103 @@
         "name": "Chocolate Sprinkled",
         "file": "choco sprinkle",
         "description": "Arguably the most popular donut to ever exist, according to me",
-        "font": "Fancy"
+        "font": "Cowboy"
     },
     {
         "name": "Glazed",
         "file": "glaze",
         "description": "The kind of donut you always see but never try, or is that just me...",
-        "font": "Fancy"
+        "font": "Homey"
     },
     {
         "name": "Chocolate Powdered",
         "file": "choco powder",
         "description": "Guy who made this was like \"man, I sure wish these powdered donuts were chocolate flavored\"",
-        "font": "Fancy"
+        "font": "Candy"
     },
     {
         "name": "Jelly Donut",
         "file": "filled jelly",
         "description": "Don't ask me what flavor the jelly is, it's probably grape flavored idk",
-        "font": "Fancy"
+        "font": "Bubble"
     },
     {
         "name": "Long John",
         "file": "choco long",
         "description": "One of those donut poster-children, but it's literally just Frosted Chocolate stretched out",
-        "font": "Fancy"
+        "font": "Rich"
     },
     {
         "name": "Crumble Crave",
         "file": "crumble",
         "description": "You'd be lucky if EVERYTHING YOU ARE isn't covered in crumbs by the end of this",
-        "font": "Fancy"
+        "font": "Creepy"
     },
     {
         "name": "Caramel Dip",
         "file": "dip caramel",
         "description": "\"Sir, I thought we were only supposed to dip the apples in caramel\" SILENCE PEASANT",
-        "font": "Fancy"
+        "font": "Candy"
     },
     {
         "name": "Donut Hole",
         "file": "hole",
         "description": "You have your hole life ahead of you, so why not make the most of it",
-        "font": "Fancy"
+        "font": "Love"
     },
     {
         "name": "Glazed Donut Hole",
         "file": "hole glaze",
         "description": "Don't expect others to glaze you for your success, it only makes them less willing",
-        "font": "Fancy"
+        "font": "Love"
     },
     {
         "name": "Powdered Donut Hole",
         "file": "hole powder",
         "description": "With the powder of friendship, anything can be possible",
-        "font": "Fancy"
+        "font": "Love"
     },
     {
         "name": "Chocolate Glazed Donut Hole",
         "file": "hole choco",
         "description": "Maybe the true Chocolate Glazed Donut Holes were the friends we made along the way",
-        "font": "Fancy"
+        "font": "Love"
     },
     {
         "name": "Chocolate Glazed Donut",
         "file": "choco glaze",
         "description": "If you think this is a lot of chocolate, boy do I have a few things to show you",
-        "font": "Fancy"
+        "font": "Cowboy"
     },
     {
         "name": "White Jimmy",
         "file": "white long",
         "description": "Long John's older brother Jimmy, he's pretty chill I'd argue",
-        "font": "Fancy"
+        "font": "Rich"
     },
     {
         "name": "Chocolate Filling",
         "file": "filled choco",
         "description": "Gosh I could really go for some chocolate fudge right now... Oh would you look at that",
-        "font": "Fancy"
+        "font": "Bubble"
     },
     {
         "name": "Naked Sprinkled",
         "file": "naked sprinkle",
         "description": "AHHH HES NAKED! COVER THE CHILDRENS' EYES! CALL THE COPS!",
-        "font": "Fancy"
+        "font": "Insane"
     },
     {
         "name": "Jimmy Sprinkles",
         "file": "white long sprinkle",
         "description": "Thank goodness you're here, Jimmy. The craziest thing happened, there was like this naked guy",
-        "font": "Fancy"
+        "font": "Rich"
     },
     {
         "name": "John Sprinkles",
         "file": "choco long sprinkle",
         "description": "Dangggg you wear those sprinkles good, John! You should become a fashion designer",
-        "font": "Fancy"
+        "font": "Rich"
     },
     {
         "name": "Sprinkled Caramel Dip",
@@ -146,158 +146,158 @@
     {
         "name": "Bronze Donut",
         "file": "super bronze",
-        "description": "Congradualtions on acquiring 25 different kinds of donuts! Enjoy this bronze med- I mean donut",
-        "font": "Fancy"
+        "description": "Congradulations on acquiring 25 different kinds of donuts! Enjoy this bronze med- I mean donut",
+        "font": "Checkpoint"
     },
     {
         "name": "Apple Strudel",
         "file": "filled apple",
         "description": "Crumble Crave if it was actually good, bro this is literally 'Apple Pie: The Donut'",
-        "font": "Fancy"
+        "font": "Creepy"
     },
     {
         "name": "No-Hole Powdered",
         "file": "holeless powder",
         "description": "Are these even donuts anymore? WHO ARE YOU? WHAT DO YOU WANT?",
-        "font": "Fancy"
+        "font": "Insane"
     },
     {
         "name": "No-Hole Sprinkled",
         "file": "holeless sprinkle",
         "description": "Looks like somebody forgot to put their lipstick on~ Wait... what is the human variant of frosting?",
-        "font": "Fancy"
+        "font": "Insane"
     },
     {
         "name": "No-Hole Chocolate",
         "file": "holeless choco",
         "description": "Not to be confused with Boston Creme, this one lacks the iconic Creme",
-        "font": "Fancy"
+        "font": "Cowboy"
     },
     {
         "name": "Creme Filling",
         "file": "filled creme",
         "description": "Not to be confused with Boston Creme, this one lacks the iconic... Boston...",
-        "font": "Fancy"
+        "font": "Bubble"
     },
     {
         "name": "Valentine",
         "file": "valentine",
         "description": "Be sure to give this one to someone you care about, or eat it yourself you biggie",
-        "font": "Fancy"
+        "font": "Love"
     },
     {
         "name": "Love Donut",
         "file": "love",
         "description": "Don't let it fool you... this is just the Strawberry Donut shaped like a heart, nothing more",
-        "font": "Fancy"
+        "font": "Love"
     },
     {
         "name": "Trick or Treat",
         "file": "trick",
         "description": "You know you wish those sprinkles were Peanut Butter flavored. But deep down, you know they're just sugar",
-        "font": "Fancy"
+        "font": "Creepy"
     },
     {
         "name": "Pumpkin Surprise",
         "file": "filled pumpkin",
         "description": "Gosh I sure do wonder what the surprise is! Could be butterscotch perhaps?",
-        "font": "Fancy"
+        "font": "Creepy"
     },
     {
         "name": "Snowball",
         "file": "snow",
         "description": "Boy they sure love their seasonals... Do these even make that many sales? I've rarely gotten them myself",
-        "font": "Fancy"
+        "font": "Winter"
     },
     {
         "name": "Ho Ho Hole!",
         "file": "hole snow",
         "description": "Anytime you feel down, just snow that I'm always here for you",
-        "font": "Fancy"
+        "font": "Winter"
     },
     {
         "name": "Saint Patrick's Donut",
         "file": "patrick",
         "description": "FYI this is NOT Patrick's donut, last I checked that dude HATED the color green",
-        "font": "Fancy"
+        "font": "Hanukkah"
     },
     {
         "name": "Sunset Sprinkles",
         "file": "sunset",
         "description": "Ngl I'd love to try this donut, it looks like it's berry flavored",
-        "font": "Fancy"
+        "font": "Techno"
     },
     {
         "name": "Berry Blast",
         "file": "berry",
         "description": "Well speak of the devil, if it isn't the actual berry flavor",
-        "font": "Fancy"
+        "font": "Candy"
     },
     {
         "name": "Boston Creme",
         "file": "filled boston",
-        "description": "The fillings of Boston Creme fill you with Determination, or is that just more Boston Creme I'm filled with",
-        "font": "Fancy"
+        "description": "The fillings of Boston Creme fill you with Determination, or is that just more Boston Creme that you're feeling",
+        "font": "Rich"
     },
     {
         "name": "Jelly Dip",
         "file": "dip jelly",
         "description": "Jeeze we gotta stop dipping these donuts in such sticky substances, they're way too messy",
-        "font": "Fancy"
+        "font": "Candy"
     },
     {
         "name": "Triple Choc Dare",
         "file": "choco triple",
         "description": "THIS... IS TO GO... EVEN... FURTHER... BEYOND... RAHHHHHHHHHHH!!!!!",
-        "font": "Fancy"
+        "font": "Creepy"
     },
     {
         "name": "Zebra Donut",
         "file": "zebra",
         "description": "Made with real chocolate and vanilla, 100% zebra free this time",
-        "font": "Fancy"
+        "font": "Insane"
     },
     {
         "name": "Half Sprinkle",
         "file": "half sprinkle",
         "description": "WHO THOUGHT THIS WAS A GOOD IDEA????",
-        "font": "Fancy"
+        "font": "Love"
     },
     {
         "name": "Cookie Dough-nut",
         "file": "cookie",
         "description": "Eyyyy? See what I did there ;) ? Thank you thank you, I'm here all week",
-        "font": "Fancy"
+        "font": "Homey"
     },
     {
         "name": "Mint Chocolate Chip",
         "file": "mint",
         "description": "That's... a donut flavor now? Welp, might as well try one",
-        "font": "Fancy"
+        "font": "Homey"
     },
     {
         "name": "American",
         "file": "america",
         "description": "Mmmmmm, Aluminum spray paint flavor, my favorite!",
-        "font": "Fancy"
+        "font": "Cowboy"
     },
     {
         "name": "Neapolitan",
         "file": "neapolitan",
         "description": "So we're just doing ice cream flavors. AM I A JOKE TO YOU?",
-        "font": "Fancy"
+        "font": "Winter"
     },
     {
         "name": "Rainbow Sprinkled",
         "file": "rainbow sprinkle",
         "description": "Don't let the different, more colorful sprinkles fool you. It's still just sugar",
-        "font": "Fancy"
+        "font": "Bubble"
     },
     {
         "name": "Silver Donut",
         "file": "super silver",
         "description": "You're at the 50 donut mark, you go girl! You're quite familiar with these donuts, aren't you",
-        "font": "Fancy"
+        "font": "Checkpoint"
     },
     {
         "name": "Eye Donut",
@@ -309,43 +309,43 @@
         "name": "White Rabbit",
         "file": "white rabbit",
         "description": "Donut Clicker Tip: Don't follow the White Rabbit",
-        "font": "Fancy"
+        "font": "Creepy"
     },
     {
         "name": "Gun Donut",
         "file": "gun",
         "description": "And just how did you get past donut security?",
-        "font": "Fancy"
+        "font": "Bubble"
     },
     {
         "name": "Blood Donut",
         "file": "blood",
         "description": "P.S. NOT REAL BLOOD! It's actually ketchup",
-        "font": "Fancy"
+        "font": "Creepy"
     },
     {
         "name": "A wHole Donut!",
         "file": "whole donut",
         "description": "You... Can't just... Do that??",
-        "font": "Fancy"
+        "font": "Insane"
     },
     {
         "name": "Player Donut",
         "file": "player",
         "description": "It's the Donut behind the slaughter!",
-        "font": "Fancy"
+        "font": "Homey"
     },
     {
         "name": "Chocolate & Powdered",
         "file": "filled powder",
         "description": "I've actually had one of these before, tastes pretty good ngl",
-        "font": "Fancy"
+        "font": "Homey"
     },
     {
         "name": "Spider Donut",
         "file": "spider",
         "description": "Made by Donuts, for Donuts, with Donuts",
-        "font": "Fancy"
+        "font": "Insane"
     },
     {
         "name": "UwU Donut",
@@ -357,85 +357,85 @@
         "name": "Double-Nut",
         "file": "double frost",
         "description": "Prepare for trouble! And make it double!",
-        "font": "Fancy"
+        "font": "Cowboy"
     },
     {
         "name": "Double-Nut Sprinkled",
         "file": "double sprinkle",
         "description": "Let's take this time to just reflect on how many donuts you've eaten by now, how are you still alive?",
-        "font": "Fancy"
+        "font": "Cowboy"
     },
     {
         "name": "Frosted No-Hole",
         "file": "holeless frost",
         "description": "The most \"I've never seen one, but it probably exists\" donut on this list",
-        "font": "Fancy"
+        "font": "Hanukkah"
     },
     {
         "name": "Ocean Blue",
         "file": "ocean",
         "description": "I thought this was a soda flavor??? WAIT ARE THOSE TINY FISH GUMMIES",
-        "font": "Fancy"
+        "font": "Bubble"
     },
     {
         "name": "Donut... Again?!",
         "file": "donut 2",
         "description": "Your sixty-fourth donut",
-        "font": "Fancy"
+        "font": "Homey"
     },
     {
         "name": "Flushed Donut",
         "file": "flushed",
         "description": "Me when I see a cute Donut lady, yknow what I'm sayin? You wouldn't get it...",
-        "font": "Fancy"
+        "font": "Love"
     },
     {
         "name": "Dapper Donut",
         "file": "dapper",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "So refined! So dashing! I wonder where this lil guy is off to",
+        "font": "Rich"
     },
     {
         "name": "Australian Donut",
         "file": "australia",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Donut hasn't felt the same ever since the great Temu war...",
+        "font": "Cowboy"
     },
     {
         "name": "Anti-Donut",
         "file": "donut anti",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Luckily this Donut isn't an actual ANTI, or else we'd be in big trouble",
+        "font": "Techno"
     },
     {
         "name": "Devil Donut",
         "file": "devil",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Don't listen to the Donut on your shoulder, he tells nothing but lies",
+        "font": "Creepy"
     },
     {
         "name": "Holy Donut",
         "file": "angel",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Ever find it oddly coincidental that Donuts are in the shape of halos? Or is it a coincidence...?",
+        "font": "Hanukkah"
     },
     {
         "name": "Steampunk Donut",
         "file": "steampunk",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "PLEASE DONT EAT THE COG DONUT! IT TASTES LIKE BRONZE! What's that? You already ate some bronze earlier? Oh for crying out loud.",
+        "font": "Cowboy"
     },
     {
         "name": "Not Shaded Donut",
         "file": "unshaded",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "WHO UNSHADED MY DONUT?! I WAS SAVING THAT FOR LATER >:(",
+        "font": "Insane"
     },
     {
         "name": "Mohawk Donut",
         "file": "mohawk",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "\"Totally radical dude!!\" is what I would say if I had lost my mind, which luckily hasn't happened yet",
+        "font": "Cowboy"
     },
     {
         "name": "Bagel",
@@ -446,385 +446,385 @@
     {
         "name": "Pure Golden Donut",
         "file": "super gold",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "You really don't remember who you are? Well, you'll find out soon enough, one more checkpoint to go...",
+        "font": "Checkpoint"
     },
     {
         "name": "Epic Donut",
         "file": "epic",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Despite the legally obtained sunglasses, this dude is pretty awesome",
+        "font": "Cowboy"
     },
     {
         "name": "King Donut",
         "file": "king",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Pfffft this guy thinks he's the king of donuts? Just wait til he finds out",
+        "font": "Rich"
     },
     {
         "name": "Code Donut",
         "file": "code",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Don't try deciphering the binary, whoever made this probably just spammed their numpad",
+        "font": "Techno"
     },
     {
         "name": "Donut Donut",
         "file": "ception",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Your first donut donut donut donut donut donut donut donut donut donut donut donut",
+        "font": "Homey"
     },
     {
         "name": "Minecraft Donut",
         "file": "square",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "It tastes like square... I don't like the taste of square...",
+        "font": "Insane"
     },
     {
         "name": "Transparent Donut",
         "file": "glass",
-        "description": "Your first donut",
+        "description": "W- Why is it see through? Is it even safe to eat? Bahhhh who cares",
         "font": "Fancy"
     },
     {
         "name": "OwO Donut",
         "file": "owo",
-        "description": "Your first donut",
+        "description": "Despite being made back in 2021, I choose to keep it in for the funny",
         "font": "Fancy"
     },
     {
         "name": "Apple Donut",
         "file": "apple",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Gee I sure hope there are no Paddles around here!",
+        "font": "Homey"
     },
     {
         "name": "Diamond Donut",
         "file": "gem diamond",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "I don't even know how you're going to bite into this one",
+        "font": "Rich"
     },
     {
         "name": "Ruby Donut",
         "file": "gem ruby",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Mmmmm ruby, my favorite flavor of shattered teeth",
+        "font": "Rich"
     },
     {
         "name": "Emerald Donut",
         "file": "gem emerald",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "I betcha could trade this one for a couple loaves of bread",
+        "font": "Rich"
     },
     {
         "name": "Spinel Donut",
         "file": "gem spinel",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Don't worry, this one wont try and kill you... I think",
+        "font": "Rich"
     },
     {
         "name": "Peridot Donut",
         "file": "gem peridot",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Do you think this one is lime flavored? Hopefully not keylime, I hate keylime",
+        "font": "Rich"
     },
     {
         "name": "Topaz Donut",
         "file": "gem topaz",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "The lemon to Peridot's lime, aweeee they should get married!",
+        "font": "Rich"
     },
     {
         "name": "Citrine Donut",
         "file": "gem citrine",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "What, are we just going through all the citrus themed gems now?",
+        "font": "Rich"
     },
     {
         "name": "Jasper Donut",
         "file": "gem jasper",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Close enough to grapefruit",
+        "font": "Rich"
     },
     {
         "name": "Onyx Donut",
         "file": "gem onyx",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "WARNING: Quick Claw not included",
+        "font": "Rich"
     },
     {
         "name": "Amethyst Donut",
         "file": "gem amethyst",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Gee I sure hope there aren't 5 unsuspecting Donut Holes around here",
+        "font": "Rich"
     },
     {
         "name": "Turquiose Donut",
         "file": "gem turquoise",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "The donut of the ocean... I think? Is there even water where we are right now?",
+        "font": "Rich"
     },
     {
         "name": "Sapphire Donut",
         "file": "gem sapphire",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Why does sapphire have a double P? It's not like we pronounce the P anyways",
+        "font": "Rich"
     },
     {
         "name": "White Opal Donut",
         "file": "gem opal",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Just how did somebody make these gem donuts? You'd be lucky to find some of these gems bigger than your fingernail",
+        "font": "Rich"
     },
     {
         "name": "Sappire Donut 2",
         "file": "gem sapphire2",
         "description": "(I accidentally but sapphire in here twice, please replace before release)",
-        "font": "Fancy"
+        "font": "Rich"
     },
     {
         "name": "Alexandrite Donut",
         "file": "gem alex",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Amethyst if it was lavender flavored. And just who is alex anyways?",
+        "font": "Rich"
     },
     {
         "name": "Tourmaline Donut",
         "file": "gem tourmaline",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "I'll have you guess what this one tastes like... That's right! ROCKS",
+        "font": "Rich"
     },
     {
         "name": "Rainbow Donut",
         "file": "super rainbow",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Welcome back, Donita",
+        "font": "Checkpoint"
     },
     {
         "name": "Venus Donut",
         "file": "sbt venus",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Not the planet Venus, the annoying little brat Venus",
+        "font": "Insane"
     },
     {
         "name": "Mars Donut",
         "file": "sbt mars",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Don't worry his head's not actually on fire, it's just his hair-do",
+        "font": "Homey"
     },
     {
         "name": "Pluto Donut",
         "file": "sbt pluto",
-        "description": "Your first donut",
+        "description": "Despite being named \"Pluto\", he's actually the tallest of us",
         "font": "Fancy"
     },
     {
         "name": "Saturn Donut",
         "file": "sbt saturn",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "That's an oddly donut shaped ring you have there",
+        "font": "Bubble"
     },
     {
         "name": "Nova Donut",
         "file": "sbt nova",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Those headphones aren't connected to anything, she just wears them for fun",
+        "font": "Techno"
     },
     {
         "name": "Nebula Donut",
         "file": "sbt nebula",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Oh Nebula, if only things had turned out differently",
+        "font": "Love"
     },
     {
         "name": "Neptune Donut",
         "file": "sbt neptune",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "",
+        "font": "Rich"
     },
     {
         "name": "Red Ronut",
         "file": "red",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Rour rirst ronut",
+        "font": "Candy"
     },
     {
         "name": "Donuty",
         "file": "donuty",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "How could you have a Donut clicker and not include Donuty! He's literally Mr. Donut himself",
+        "font": "Homey"
     },
     {
         "name": "Joey Donut",
         "file": "fnan joey",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "This Donut used to be served at the local Joey's diner, before it mysteriously vanished",
+        "font": "Creepy"
     },
     {
         "name": "Frankincense Donut",
         "file": "fnan frank",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "We also have him in molten flavor",
+        "font": "Insane"
     },
     {
         "name": "Hankerchief Donut",
         "file": "fnan handker",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "The evil tiny teeth of murder are coming after your ankles",
+        "font": "Winter"
     },
     {
         "name": "Arson Donut",
         "file": "fnan arson",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "He looks mildly infuriated to be a donut",
+        "font": "Cowboy"
     },
     {
         "name": "Ded Donut",
         "file": "dead",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "NOOOOOOOO WHO KILLED MY DONUT :(",
+        "font": "Love"
     },
     {
         "name": "Doreo",
         "file": "oreo",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Yes, that is two donuts stacked on top of eachother with frosting in the middle, don't try this at home",
+        "font": "Rich"
     },
     {
         "name": "Mr. Eye Donut",
         "file": "eye mr",
-        "description": "Your first donut",
+        "description": "Eye Mr. you~",
         "font": "Fancy"
     },
     {
         "name": "Floral Donut",
         "file": "floral",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "P.S. not actually a donut, it's just a very neatly trimmed flower bush",
+        "font": "Homey"
     },
     {
         "name": "Cact-o-Nut",
         "file": "cactus",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Goodluck eating this one",
+        "font": "Insane"
     },
     {
         "name": "Donut Spinner",
         "file": "spinner",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Now you can eat Donuts without ever getting bored!",
+        "font": "Candy"
     },
     {
         "name": "Dough - No, too much frosting",
         "file": "extra frost",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Speak for yourself, this is the RIGHT amount of frosting baby",
+        "font": "Insane"
     },
     {
         "name": "Dough - No, too many sprinkles",
         "file": "extra sprinkle",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "You... All you did was make the Donut crunchier",
+        "font": "Insane"
     },
     {
         "name": "Donetta",
         "file": "donetta",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Now there's that cute Donut chick I was taking about, you still wouldn't get it",
+        "font": "Love"
     },
     {
         "name": "sghaFasdjgasgDShjaihasHrajs;gr",
         "file": "spam",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+        "font": "Techno"
     },
     {
         "name": "Ignore that last one :)",
         "file": "ignore",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Probably best you listen to that advice, that is if you enjoy keeping your sanity",
+        "font": "Homey"
     },
     {
         "name": "Copper Donut",
         "file": "super copper",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Your brother seemed nice, I can't imagine how hard it'd be if you two ever separate",
+        "font": "Checkpoint"
     },
     {
         "name": "Tree Nut",
         "file": "tree",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "So this is what people are allergic to?",
+        "font": "Hanukkah"
     },
     {
         "name": "Apple Tree Nut",
         "file": "tree apple",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "The life cycle of an Apple Donut",
+        "font": "Creepy"
     },
     {
         "name": "Youtube Donut",
         "file": "youtube",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "HELLO FELLOW DONUTEERS AND WELCOME TO ANOTHER AWESOME DONUT CLICKER 2 LETS PLAY",
+        "font": "Techno"
     },
     {
         "name": "TikTok Donut",
         "file": "tiktok",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Mmmmm, tastes like 5 hours just spent sitting on the bed",
+        "font": "Techno"
     },
     {
         "name": "Dionut",
         "file": "dio",
-        "description": "Your first donut",
+        "description": "\"Waiter! There seems to be a Dio in my Donnut!\"",
         "font": "Fancy"
     },
     {
         "name": "Taxes Donut",
         "file": "taxes",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Just wait til the IRS find out about this one",
+        "font": "Creepy"
     },
     {
         "name": "Pumpkin Donut",
         "file": "pumpkin",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "You... can't just carve a hole in a pumpkin and call it a Donut...",
+        "font": "Winter"
     },
     {
         "name": "Donut Emoji",
         "file": "emoji",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Your first emoji... Wait no shoot we already had flushed donut",
+        "font": "Homey"
     },
     {
         "name": "Baldonut",
         "file": "baldi",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "What's 9 donuts plus 10 donuts? Eyyyy? Aren't I hilarious",
+        "font": "Techno"
     },
     {
         "name": "Scarlet Crimson",
         "file": "crimson",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "This one looks like it eats Blood Donuts for breakfast",
+        "font": "Creepy"
     },
     {
         "name": "Dot Nut King",
         "file": "dot king",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "W- What are you doing here?",
+        "font": "Insane"
     },
     {
         "name": "Donutzart",
         "file": "motzart",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Gosh he needs his own rhythm game",
+        "font": "Winter"
     },
     {
         "name": "RGB Donut",
         "file": "rgb",
-        "description": "Your first donut",
-        "font": "Fancy"
+        "description": "Tastes like I need to get a new GPU",
+        "font": "Techno"
     }
 ]

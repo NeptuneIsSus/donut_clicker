@@ -2,12 +2,10 @@
     font-family: "Counter";
     src: url(assets/fonts/Knewave-Regular.ttf);
 }
-
 @font-face {
     font-family: "Button";
     src: url(assets/fonts/Aldrich-Regular.ttf);
 }
-
 @font-face {
     font-family: "Info";
     src: url(assets/fonts/BlackOpsOne-Regular.ttf);
@@ -17,6 +15,56 @@
     font-family: "optFancy";
     src: url(assets/fonts/Cookie-Regular.ttf);
 }
+@font-face {
+    font-family: "optHomey";
+    src: url(assets/fonts/Chewy-Regular.ttf);
+}
+@font-face {
+    font-family: "optCreepy";
+    src: url(assets/fonts/Creepy.ttf);
+}
+@font-face {
+    font-family: "optBubble";
+    src: url(assets/fonts/FascinateInline-Regular.ttf);
+}
+@font-face {
+    font-family: "optInsane";
+    src: url(assets/fonts/MountainsofChristmas-Regular.ttf);
+}
+@font-face {
+    font-family: "optHanukkah";
+    src: url(assets/fonts/Hanukkah.ttf);
+}
+@font-face {
+    font-family: "optCandy";
+    src: url(assets/fonts/HennyPenny-Regular.ttf);
+}
+@font-face {
+    font-family: "optLove";
+    src: url(assets/fonts/Love.ttf);
+}
+@font-face {
+    font-family: "optRich";
+    src: url(assets/fonts/ManufacturingConsent-Regular.ttf);
+}
+@font-face {
+    font-family: "optCowboy";
+    src: url(assets/fonts/Smokum-Regular.ttf);
+}
+@font-face {
+    font-family: "optWinter";
+    src: url(assets/fonts/Winter.ttf);
+}
+@font-face {
+    font-family: "optTechno";
+    src: url(assets/fonts/Geo-Regular.ttf);
+}
+@font-face {
+    font-family: "optCheckpoint";
+    src: url(assets/fonts/NewRocker-Regular.ttf);
+}
+
+
 
 body {
     width: 100vw;
@@ -217,21 +265,27 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 60px;
+    width: 700px;
 }
 
 .donut-info h2 {
     margin: 0;
     margin-bottom: 60px;
+    font-size: 75px;
     font-family: "optFancy", sans-serif;
     font-weight: 400;
     font-style: normal;
-    width: 200%;
+    width: 100%;
+    height: 120px;
     text-align: center;
+    
+    white-space: nowrap;
 }
 
 .donut-info p {
     margin: 0;
     margin-bottom: 60px;
+    font-size: 55px;
     font-family: "Info", sans-serif;
     font-weight: 400;
     font-style: normal;

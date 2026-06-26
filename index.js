@@ -112,13 +112,25 @@ function updateDonut() {
             const nxtSprite = data[nextDonut]["file"]
             const nxtName = data[nextDonut]["name"]
             const nxtDesc = data[nextDonut]["description"]
+            const nxtFont = data[nextDonut]["font"]
+            const nxtFormalFont = `opt${nxtFont}, sans-serif`
 
-            console.log("Current donut:",curSprite,", Next donut:",nxtName)
+            //console.log("Donut font:",nxtFont,", Full font:", nxtFormalFont)
 
             donutSprite.src = DirDonutSprites + curSprite + ".svg";
             nextDonutSprite.src = DirDonutSprites + nxtSprite + ".svg";
             nextDonutName.textContent = nxtName;
+            nextDonutName.style.fontFamily = nxtFormalFont
             nextDonutDescription.textContent = nxtDesc;
+
+            let tmpSize = 100;
+            nextDonutName.style.fontSize = `${tmpSize}px`;
+
+            while ((nextDonutName.scrollWidth > nextDonutName.clientWidth ||
+                nextDonutName.scrollHeight > nextDonutName.clientHeight) && tmpSize > 1) {
+                tmpSize -= 5;
+                nextDonutName.style.fontSize = `${tmpSize}px`;
+            };
         }).catch(err => console.error(err));
 };
 
