@@ -8,7 +8,8 @@
         "var": "doubleChance",
         "value": 0.2,
         "change": true,
-        "requires": []
+        "requires": [],
+        "prices": ["50","400","3.5k","35k","300k"]
     },{
         "name": "Homesick",
         "description": "Improves the chance for the donut to not move far when clicked",
@@ -18,7 +19,8 @@
         "var": "homesickChance",
         "value": 0.2,
         "change": true,
-        "requires": []
+        "requires": [],
+        "prices": ["80","650","5k","60k","450k"]
     },{
         "name": "Clicker Storm",
         "description": "Every 100 clicks, causes a storm of mice to click the donut",
@@ -28,7 +30,8 @@
         "var": "stormClicks",
         "value": 10,
         "change": false,
-        "requires": []
+        "requires": [],
+        "prices": ["150"]
     },{
         "name": "Clicker League",
         "description": "Decreases the clicks needed to activate the storm",
@@ -38,7 +41,8 @@
         "var": "stormCharge",
         "value": -15,
         "change": true,
-        "requires": [2]
+        "requires": [2],
+        "prices": ["1k","8k","100k","750k"]
     },{
         "name": "Donut Ninja",
         "description": "Instead of clicking, you only have to hold down the mouse button",
@@ -48,7 +52,8 @@
         "var": "clickType",
         "value": 1,
         "change": false,
-        "requires": []
+        "requires": [],
+        "prices": ["200"]
     },{
         "name": "Razor Sharp Mouse",
         "description": "You slice the donut by simply hovering it, no clicking required",
@@ -58,7 +63,8 @@
         "var": "clickType",
         "value": 2,
         "change": false,
-        "requires": [4]
+        "requires": [4],
+        "prices": ["20k"]
     },{
         "name": "Tripler",
         "description": "Adds a chance to triple click as opposed to double",
@@ -68,7 +74,8 @@
         "var": "doubleChance",
         "value": 0.25,
         "change": true,
-        "requires": [0]
+        "requires": [0],
+        "prices": ["6m","25m","2b","500b"]
     },{
         "name": "Stoned Nut",
         "description": "Adds a chance for the donut to not move at all",
@@ -78,7 +85,8 @@
         "var": "homesickChance",
         "value": 0.25,
         "change": true,
-        "requires": [1]
+        "requires": [1],
+        "prices": ["900k","300m","800b","1.5q"]
     },{
         "name": "Roll the Dice",
         "description": "You slice the donut by simply hovering it, no clicking required",
@@ -88,7 +96,8 @@
         "var": "diceWait",
         "value": 1,
         "change": false,
-        "requires": []
+        "requires": [],
+        "prices": ["500"]
     },{
         "name": "Dice Bag",
         "description": "You slice the donut by simply hovering it, no clicking required",
@@ -98,7 +107,8 @@
         "var": "diceWait",
         "value": -0.35,
         "change": true,
-        "requires": [8]
+        "requires": [8],
+        "prices": ["2k","3.5m"]
     },{
         "name": "Die Mice",
         "description": "You slice the donut by simply hovering it, no clicking required",
@@ -108,6 +118,18 @@
         "var": "diceClickChance",
         "value": 0.01,
         "change": false,
-        "requires": [4]
+        "requires": [4],
+        "prices": ["15m"]
+    },{
+        "name": "Cheaper Donuts",
+        "description": "Donuts get a permanant sale!",
+        "levels": 3,
+        "tier": 3,
+        "file": "cheap",
+        "var": "donutSale",
+        "value": -0.15,
+        "change": true,
+        "requires": [4],
+        "prices": ["15k","1.25m","25m"]
     }
 ]

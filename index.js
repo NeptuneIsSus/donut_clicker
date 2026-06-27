@@ -27,6 +27,9 @@ let poorSFX = document.querySelector(".poor-sfx");
 let devMode = false;
 let devButton = document.querySelector(".dev-mode");
 
+let originalUpgrade = document.querySelector(".upgrade")
+let upgrid = document.querySelector(".upgrid")
+
 let mouseDown = false;
 
 let upgradeOwned = []
@@ -37,7 +40,8 @@ let upgradeStat = {
     "stormCharge": 100,
     "stormClicks": 0,
     "diceChance": 1,
-    "diceClickChance": 0.0
+    "diceClickChance": 0.0,
+    "donutSale": 1.0
 }
 
 const DirDonutSprites = "assets/img/donuts/"
@@ -83,6 +87,25 @@ function formatNumber(text) {
     if (absolute >= 1_000n) {return suffix(absolute,1,"k",prefix)};
 
     return prefix + absolute.toString();
+}
+
+function addUpgrade(data) {
+    let background = `assets/img/upgrade templates/${data["tier"]}`;
+    let foregroung = `assets/img/upgrade/${data["name"]}`;
+    let level = "";
+
+    let duplicateUpgrade = originalUpgrade.cloneNode(true);
+    duplicateUpgrade.classList.remove("disabled");
+
+    let dupeBG = duplicateUpgrade.querySelector(".upgrade-bg");
+    let dupeFG = duplicateUpgrade.querySelector(".upgrade-fg");
+    let dupeLV = duplicateUpgrade.querySelector("p");
+
+    dupeBG.src = background;
+    dupeFG.src = foreground;
+    dupeLV.innerHTML = level;
+
+    upgrid.appendChild(duplicateUpgrade);
 }
 
 function updateCounter() {
