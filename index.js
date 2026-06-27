@@ -27,8 +27,14 @@ let poorSFX = document.querySelector(".poor-sfx");
 let devMode = false;
 let devButton = document.querySelector(".dev-mode");
 
-let originalUpgrade = document.querySelector(".upgrade")
-let upgrid = document.querySelector(".upgrid")
+let originalUpgrade = document.querySelector(".upgrade");
+let upgrid = document.querySelector(".upgrid");
+const levelTypes = ["I","II","III","IV","V"];
+
+let upgradeName = document.querySelector(".upgrade-name");
+let upgradePrice = document.querySelector(".upgrade-price");
+let upgradeLevel = document.querySelector(".upgrade-level");
+let upgradeDescription = document.querySelector(".upgrade-description");
 
 let mouseDown = false;
 
@@ -42,7 +48,7 @@ let upgradeStat = {
     "diceChance": 1,
     "diceClickChance": 0.0,
     "donutSale": 1.0
-}
+};
 
 const DirDonutSprites = "assets/img/donuts/"
 
@@ -87,12 +93,12 @@ function formatNumber(text) {
     if (absolute >= 1_000n) {return suffix(absolute,1,"k",prefix)};
 
     return prefix + absolute.toString();
-}
+};
 
 function addUpgrade(data) {
-    let background = `assets/img/upgrade templates/${data["tier"]}`;
-    let foregroung = `assets/img/upgrade/${data["name"]}`;
-    let level = "";
+    const background = `assets/img/upgrade templates/${data["tier"]}.svg`;
+    const foreground = `assets/img/upgrade/${data["file"]}.svg`;
+    const level = levelTypes[0];
 
     let duplicateUpgrade = originalUpgrade.cloneNode(true);
     duplicateUpgrade.classList.remove("disabled");
@@ -106,7 +112,7 @@ function addUpgrade(data) {
     dupeLV.innerHTML = level;
 
     upgrid.appendChild(duplicateUpgrade);
-}
+};
 
 function updateCounter() {
     energyElement.innerHTML = formatNumber(energy)
@@ -153,6 +159,16 @@ function updateDonut() {
                 nextDonutName.scrollHeight > nextDonutName.clientHeight) && tmpSize > 1) {
                 tmpSize -= 5;
                 nextDonutName.style.fontSize = `${tmpSize}px`;
+            };
+        }).catch(err => console.error(err));
+};
+
+function updateUpgrades() {
+    fetch("upgrades.json")
+        .then(response => response.json())
+        .then(data => {
+            for (let i of data) {
+                addUpgrade(i)
             };
         }).catch(err => console.error(err));
 };
@@ -270,3 +286,4 @@ function donutHover() {
 }
 
 updateDonut();
+updateUpgrades();

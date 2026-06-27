@@ -103,7 +103,7 @@
         "description": "You slice the donut by simply hovering it, no clicking required",
         "levels": 2,
         "tier": 3,
-        "file": "dicer",
+        "file": "dices",
         "var": "diceWait",
         "value": -0.35,
         "change": true,
