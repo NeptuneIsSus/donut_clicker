@@ -23,6 +23,7 @@ let closeMenuSFX = document.querySelector(".close-menu-sfx");
 
 let buySFX = document.querySelector(".buy-sfx");
 let poorSFX = document.querySelector(".poor-sfx");
+let hoverSFX = document.querySelector(".hover-sfx")
 
 let devMode = false;
 let devButton = document.querySelector(".dev-mode");
@@ -38,7 +39,8 @@ let upgradeDescription = document.querySelector(".upgrade-description");
 
 let mouseDown = false;
 
-let upgradeOwned = []
+let upgradeOwned = {}
+let upgradeUnlocked = [0,1,2,4,8,11]
 let upgradeStat = {
     "clickType": 0, // 1 hold down mouse, 2 no click required
     "doubleChance": 0.0, // 0.0-1.0 double clicks, 1.0-2.0 triple clicks
@@ -95,10 +97,14 @@ function formatNumber(text) {
     return prefix + absolute.toString();
 };
 
-function addUpgrade(data) {
+function addUpgrade(data,id) {
     const background = `assets/img/upgrade templates/${data["tier"]}.svg`;
     const foreground = `assets/img/upgrade/${data["file"]}.svg`;
-    const level = levelTypes[0];
+    let level = "";
+
+    if (data["levels"] > 1) {
+        level = levelTypes[0]
+    }
 
     let duplicateUpgrade = originalUpgrade.cloneNode(true);
     duplicateUpgrade.classList.remove("disabled");
@@ -110,6 +116,18 @@ function addUpgrade(data) {
     dupeBG.src = background;
     dupeFG.src = foreground;
     dupeLV.innerHTML = level;
+
+    duplicateUpgrade.dataset.name = data["name"]
+    duplicateUpgrade.dataset.price = data["prices"][0]
+    duplicateUpgrade.dataset.description = data["description"]
+    duplicateUpgrade.dataset.level = level
+    duplicateUpgrade.dataset.var = data["var"]
+    duplicateUpgrade.dataset.value = data["value"]
+    duplicateUpgrade.dataset.change = data["change"]
+    duplicateUpgrade.dataset.id = id
+
+    duplicateUpgrade.addEventListener("mouseenter", upgradeHover);
+    duplicateUpgrade.addEventListener("click", upgradeClick);
 
     upgrid.appendChild(duplicateUpgrade);
 };
@@ -164,11 +182,17 @@ function updateDonut() {
 };
 
 function updateUpgrades() {
+    /*for (let e in document.querySelectorAll(".upgrade")) {
+        if (!e.classList.contains("disabled")) {
+            e.remove()
+        };
+    };*/
+
     fetch("upgrades.json")
         .then(response => response.json())
         .then(data => {
-            for (let i of data) {
-                addUpgrade(i)
+            for (let i of upgradeUnlocked) {
+                addUpgrade(data[i],i)
             };
         }).catch(err => console.error(err));
 };
@@ -278,12 +302,95 @@ function purchaseUnhover() {
 };
 
 function donutHover() {
-    if (clickType === 2) {
+    if (upgradeStat["clickType"] === 2) {
         clickDonut();
-    } else if (clickType && mouseDown) {
+    } else if (upgradeStat["clickType"] && mouseDown) {
         clickDonut();
     };
+};
+
+function upgradeHover(event) {
+    const name = event.currentTarget.dataset.name
+    const cost = event.currentTarget.dataset.price
+    const description = event.currentTarget.dataset.description
+    const level = event.currentTarget.dataset.level
+
+    upgradeName.innerHTML = name
+    upgradePrice.innerHTML = `${cost} energy`
+    upgradeDescription.innerHTML = description
+    if (level === "") {
+        upgradeLevel.innerHTML = ""
+    } else {
+        upgradeLevel.innerHTML = `Level: ${level}`
+    }
+
+    hoverSFX.currentTime = 0;
+    hoverSFX.play();
+};
+
+function getBigPrice(stringPrice) {
+    const suffix = stringPrice.at(-1);
+    if (suffix === "0") {return BigInt(stringPrice);};
+    const stringNum = stringPrice.slice(0,-1);
+    const small = BigInt(stringNum * 1000);
+
+    if (suffix === "k") {
+        return small
+    } else if (suffix === "m") {
+        return small * (1000n)
+    } else if (suffix === "b") {
+        return small * (1000n ** 2n)
+    } else if (suffix === "t") {
+        return small * (1000n ** 3n)
+    } else if (suffix === "q") {
+        return small * (1000n ** 4n)
+    } else if (suffix === "Q") {
+        return small * (1000n ** 5n)
+    } else if (suffix === "s") {
+        return small * (1000n ** 6n)
+    } else if (suffix === "S") {
+        return small * (1000n ** 7n)
+    } else if (suffix === "o") {
+        return small * (1000n ** 8n)
+    } else if (suffix === "n") {
+        return small * (1000n ** 9n)
+    } else if (suffix === "d") {
+        return small * (1000n ** 10n)
+    };
+    return small;
 }
+
+function upgradeClick(event) {
+    const compare = getBigPrice(event.currentTarget.dataset.price)
+    console.log(compare)
+    if (energy >= compare || devMode) {
+        energy -= compare
+        updateCounter()
+
+        const id = event.currentTarget.dataset.id
+
+        if (Object.hasOwn(upgradeOwned, id)) {
+            upgradeOwned[id] += 1
+        } else {
+            upgradeOwned[id] = 1
+        }
+
+        console.log(upgradeOwned)
+
+        buySFX.currentTime = 0;
+        buySFX.play();
+    } else {
+        poorSFX.currentTime = 0;
+        poorSFX.play();
+    };
+};
+
+document.addEventListener("mousedown", () => {
+    mouseDown = true;
+});
+document.addEventListener("mouseup", () => {
+    mouseDown = false;
+});
 
 updateDonut();
 updateUpgrades();

@@ -8,9 +8,10 @@
         "var": "doubleChance",
         "value": 0.2,
         "change": true,
-        "requires": [],
-        "prices": ["50","400","3.5k","35k","300k"]
-    },{
+        "prices": ["50","400","3.5k","35k","300k"],
+        "unlocks": [6]
+    },
+    {
         "name": "Homesick",
         "description": "Improves the chance for the donut to not move far when clicked",
         "levels": 5,
@@ -19,9 +20,10 @@
         "var": "homesickChance",
         "value": 0.2,
         "change": true,
-        "requires": [],
-        "prices": ["80","650","5k","60k","450k"]
-    },{
+        "prices": ["80","650","5k","60k","450k"],
+        "unlocks": [7]
+    },
+    {
         "name": "Clicker Storm",
         "description": "Every 100 clicks, causes a storm of mice to click the donut",
         "levels": 1,
@@ -30,9 +32,10 @@
         "var": "stormClicks",
         "value": 10,
         "change": false,
-        "requires": [],
-        "prices": ["150"]
-    },{
+        "prices": ["150"],
+        "unlocks": [3]
+    },
+    {
         "name": "Clicker League",
         "description": "Decreases the clicks needed to activate the storm",
         "levels": 4,
@@ -41,9 +44,10 @@
         "var": "stormCharge",
         "value": -15,
         "change": true,
-        "requires": [2],
-        "prices": ["1k","8k","100k","750k"]
-    },{
+        "prices": ["1k","8k","100k","750k"],
+        "unlocks": []
+    },
+    {
         "name": "Donut Ninja",
         "description": "Instead of clicking, you only have to hold down the mouse button",
         "levels": 1,
@@ -52,9 +56,10 @@
         "var": "clickType",
         "value": 1,
         "change": false,
-        "requires": [],
-        "prices": ["200"]
-    },{
+        "prices": ["200"],
+        "unlocks": [5]
+    },
+    {
         "name": "Razor Sharp Mouse",
         "description": "You slice the donut by simply hovering it, no clicking required",
         "levels": 1,
@@ -63,9 +68,10 @@
         "var": "clickType",
         "value": 2,
         "change": false,
-        "requires": [4],
-        "prices": ["20k"]
-    },{
+        "prices": ["20k"],
+        "unlocks": []
+    },
+    {
         "name": "Tripler",
         "description": "Adds a chance to triple click as opposed to double",
         "levels": 4,
@@ -74,9 +80,10 @@
         "var": "doubleChance",
         "value": 0.25,
         "change": true,
-        "requires": [0],
-        "prices": ["6m","25m","2b","500b"]
-    },{
+        "prices": ["6m","25m","2b","500b"],
+        "unlocks": []
+    },
+    {
         "name": "Stoned Nut",
         "description": "Adds a chance for the donut to not move at all",
         "levels": 4,
@@ -85,42 +92,46 @@
         "var": "homesickChance",
         "value": 0.25,
         "change": true,
-        "requires": [1],
-        "prices": ["900k","300m","800b","1.5q"]
-    },{
+        "prices": ["900k","300m","800b","1.5q"],
+        "unlocks": []
+    },
+    {
         "name": "Roll the Dice",
-        "description": "You slice the donut by simply hovering it, no clicking required",
+        "description": "Every so often a Dice will spawn, click it to activate a random effect!",
         "levels": 1,
         "tier": 1,
         "file": "dice",
         "var": "diceWait",
         "value": 1,
         "change": false,
-        "requires": [],
-        "prices": ["500"]
-    },{
+        "prices": ["500"],
+        "unlocks": [9,10]
+    },
+    {
         "name": "Dice Bag",
-        "description": "You slice the donut by simply hovering it, no clicking required",
+        "description": "Die will now spawn more frequently",
         "levels": 2,
         "tier": 3,
         "file": "dices",
         "var": "diceWait",
         "value": -0.35,
         "change": true,
-        "requires": [8],
-        "prices": ["2k","3.5m"]
-    },{
+        "prices": ["2k","3.5m"],
+        "unlocks": []
+    },
+    {
         "name": "Die Mice",
-        "description": "You slice the donut by simply hovering it, no clicking required",
+        "description": "Every click of the donut has a small chance to spawn a Dice",
         "levels": 1,
         "tier": 2,
         "file": "razor",
         "var": "diceClickChance",
         "value": 0.01,
         "change": false,
-        "requires": [4],
-        "prices": ["15m"]
-    },{
+        "prices": ["15m"],
+        "unlocks": []
+    },
+    {
         "name": "Cheaper Donuts",
         "description": "Donuts get a permanant sale!",
         "levels": 3,
@@ -129,7 +140,7 @@
         "var": "donutSale",
         "value": -0.15,
         "change": true,
-        "requires": [4],
-        "prices": ["15k","1.25m","25m"]
+        "prices": ["15k","1.25m","25m"],
+        "unlocks": []
     }
 ]

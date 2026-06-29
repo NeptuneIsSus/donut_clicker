@@ -18,15 +18,51 @@
         "font": "Fancy"
     },
     {
+        "name": "Jelly Donut",
+        "file": "filled jelly",
+        "description": "Don't ask me what flavor the jelly is, it's probably grape flavored idk",
+        "font": "Bubble"
+    },
+    {
         "name": "Frosted Chocolate",
         "file": "choco frost",
         "description": "The beginning of a chocolate journey",
         "font": "Cowboy"
     },
     {
+        "name": "Glazed",
+        "file": "glaze",
+        "description": "The kind of donut you always see but never try, or is that just me...",
+        "font": "Homey"
+    },
+    {
+        "name": "Cinnamon Donut",
+        "file": "cinna",
+        "description": "Unlike the powdered donut, this is more than just sugar covering the donut! It has flavor~",
+        "font": "Fancy"
+    },
+    {
+        "name": "Frosted Strawberry",
+        "file": "red frost",
+        "description": "I can't believe I forgot about this one in the original, cuz it's one of my favorites",
+        "font": "Homey"
+    },
+    {
         "name": "No-Hole Donut",
         "file": "holeless",
         "description": "FYI this donut is not filled, it is simply a donut without a purpose",
+        "font": "Insane"
+    },
+    {
+        "name": "Glazed Blueberry",
+        "file": "glaze blue",
+        "description": "Almost like a blueberry muffin! But 10x better (Which keep in mind is a difficult feat)",
+        "font": "Bubble"
+    },
+    {
+        "name": "Lemon Donut",
+        "file": "filled lemon",
+        "description": "A donut with delicious lemon jam, way better than whatever that grape jam was doing",
         "font": "Hanukkah"
     },
     {
@@ -42,9 +78,9 @@
         "font": "Cowboy"
     },
     {
-        "name": "Glazed",
-        "file": "glaze",
-        "description": "The kind of donut you always see but never try, or is that just me...",
+        "name": "Strawberry Sprinkles",
+        "file": "red sprinkle",
+        "description": "This marks the grand trio of Frosted Sprinkles Donuts",
         "font": "Homey"
     },
     {
@@ -54,10 +90,16 @@
         "font": "Candy"
     },
     {
-        "name": "Jelly Donut",
-        "file": "filled jelly",
-        "description": "Don't ask me what flavor the jelly is, it's probably grape flavored idk",
-        "font": "Bubble"
+        "name": "Chocolate Coconut",
+        "file": "choc coco",
+        "description": "Coconut really does go with a lot of things, doesn't it",
+        "font": "Cowboy"
+    },
+    {
+        "name": "Chocolate Peanut",
+        "file": "choc peanut",
+        "description": "Quite literally a sunday turned into a donut",
+        "font": "Cowboy"
     },
     {
         "name": "Long John",
@@ -114,6 +156,36 @@
         "font": "Rich"
     },
     {
+        "name": "Cinnamon Crumbles",
+        "file": "cinna crumble",
+        "description": "I heard ya like coffee cake, so I made ya a donut, just for you",
+        "font": "Homey"
+    },
+    {
+        "name": "Frosted Chocolate Sprinkles",
+        "file": "white choc",
+        "description": "Now these are the kinda sprinkles I'm talking about, beautiful chocolate sprinkles",
+        "font": "Fancy"
+    },
+    {
+        "name": "Maple Jake",
+        "file": "maple long",
+        "description": "Everybody calls him the Maple Bar... But we aren't everyone now, are we",
+        "font": "Homey"
+    },
+    {
+        "name": "White Coconut",
+        "file": "white coco",
+        "description": "You can barely see the coconuts, but that doesn't mean you won't taste em",
+        "font": "Fancy"
+    },
+    {
+        "name": "White Peanut",
+        "file": "white peanut",
+        "description": "Definitely gives you the feeling of \"Man I wish this was chocolate instead\"",
+        "font": "Fancy"
+    },
+    {
         "name": "Chocolate Filling",
         "file": "filled choco",
         "description": "Gosh I could really go for some chocolate fudge right now... Oh would you look at that",
@@ -142,12 +214,6 @@
         "file": "dip caramel sprinkle",
         "description": "Caramel I know gosh darn well you're only wearing those sprinkles because everyone else is",
         "font": "Fancy"
-    },
-    {
-        "name": "Bronze Donut",
-        "file": "super bronze",
-        "description": "Congradulations on acquiring 25 different kinds of donuts! Enjoy this bronze med- I mean donut",
-        "font": "Checkpoint"
     },
     {
         "name": "Apple Strudel",
@@ -246,10 +312,22 @@
         "font": "Candy"
     },
     {
+        "name": "Chocolate Glazed Fudge",
+        "file": "choc double",
+        "description": "Hah, you thought chocolate glazed donut was already too much chocolate? Fool...",
+        "font": "Cowboy"
+    },
+    {
         "name": "Triple Choc Dare",
         "file": "choco triple",
         "description": "THIS... IS TO GO... EVEN... FURTHER... BEYOND... RAHHHHHHHHHHH!!!!!",
         "font": "Creepy"
+    },
+    {
+        "name": "Vanilla Glazed Donut",
+        "file": "white glaze",
+        "description": "Wait... There's more than just the Chocolate Glazed Donut?!",
+        "font": "Fancy"
     },
     {
         "name": "Zebra Donut",
@@ -276,6 +354,12 @@
         "font": "Homey"
     },
     {
+        "name": "Cookies & Cream",
+        "file": "cnc",
+        "description": "The oreo donut! Yes that's right, no other oreo donut exists other than me",
+        "font": "Bubble"
+    },
+    {
         "name": "American",
         "file": "america",
         "description": "Mmmmmm, Aluminum spray paint flavor, my favorite!",
@@ -292,12 +376,6 @@
         "file": "rainbow sprinkle",
         "description": "Don't let the different, more colorful sprinkles fool you. It's still just sugar",
         "font": "Bubble"
-    },
-    {
-        "name": "Silver Donut",
-        "file": "super silver",
-        "description": "You're at the 50 donut mark, you go girl! You're quite familiar with these donuts, aren't you",
-        "font": "Checkpoint"
     },
     {
         "name": "Eye Donut",
@@ -444,12 +522,6 @@
         "font": "Fancy"
     },
     {
-        "name": "Pure Golden Donut",
-        "file": "super gold",
-        "description": "You really don't remember who you are? Well, you'll find out soon enough, one more checkpoint to go...",
-        "font": "Checkpoint"
-    },
-    {
         "name": "Epic Donut",
         "file": "epic",
         "description": "Despite the illegally obtained sunglasses, this dude is pretty awesome",
@@ -594,12 +666,6 @@
         "font": "Rich"
     },
     {
-        "name": "Rainbow Donut",
-        "file": "super rainbow",
-        "description": "Welcome back, Donita",
-        "font": "Checkpoint"
-    },
-    {
         "name": "Venus Donut",
         "file": "sbt venus",
         "description": "Not the planet Venus, the annoying little brat Venus",
@@ -742,12 +808,6 @@
         "file": "ignore",
         "description": "Probably best you listen to that advice, that is if you enjoy keeping your sanity",
         "font": "Homey"
-    },
-    {
-        "name": "Copper Donut",
-        "file": "super copper",
-        "description": "Your brother seemed nice, I can't imagine how hard it'd be if you two ever separate",
-        "font": "Checkpoint"
     },
     {
         "name": "Tree Nut",

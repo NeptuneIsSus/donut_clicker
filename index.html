@@ -17,6 +17,7 @@
     <audio src="assets/sfx/close.wav" class="close-menu-sfx"></audio>
     <audio src="assets/sfx/buy.wav" class="buy-sfx"></audio>
     <audio src="assets/sfx/poor.wav" class="poor-sfx"></audio>
+    <audio src="assets/sfx/hover.wav" class="hover-sfx"></audio>
     
     <section class="energy">
         <h1 class="energy-text">0</h1>
@@ -63,8 +64,8 @@
                 <h1>Upgrades</h1>
                 <div class="upgrid">
                     <div class="upgrade disabled">
-                        <img class="upgrade-bg" src="assets/img/upgrade templates/0.svg" alt="upgrade background" srcset="">
-                        <img class="upgrade-fg" src="assets/img/upgrade/double.svg" alt="upgrade icon" srcset="">
+                        <img class="upgrade-bg" src="assets/img/upgrade templates/0.svg" alt="upgrade background" srcset="" draggable="false">
+                        <img class="upgrade-fg" src="assets/img/upgrade/double.svg" alt="upgrade icon" srcset="" draggable="false">
                         <p>IV</p>
                     </div>
                 </div>
@@ -103,7 +104,7 @@
 
 
     <div class="donut">
-        <img src="assets/img/donuts/donut.svg" alt="" srcset="" onclick="clickDonut()" draggable="false">
+        <img src="assets/img/donuts/donut.svg" alt="" srcset="" onclick="clickDonut()" onmouseenter="donutHover()" draggable="false">
     </div>
 
     <script src="index.js"></script>
