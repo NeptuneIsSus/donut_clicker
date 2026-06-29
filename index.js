@@ -125,6 +125,10 @@ function addUpgrade(data,id) {
     duplicateUpgrade.dataset.value = data["value"]
     duplicateUpgrade.dataset.change = data["change"]
     duplicateUpgrade.dataset.id = id
+    duplicateUpgrade.dataset.tier = data["tier"]
+    duplicateUpgrade.dataset.levelcount = data["levels"]
+    duplicateUpgrade.dataset.unlocks = JSON.stringify(data["unlocks"])
+    console.log(duplicateUpgrade.dataset.levelcount)
 
     duplicateUpgrade.addEventListener("mouseenter", upgradeHover);
     duplicateUpgrade.addEventListener("click", upgradeClick);
@@ -181,13 +185,7 @@ function updateDonut() {
         }).catch(err => console.error(err));
 };
 
-function updateUpgrades() {
-    /*for (let e in document.querySelectorAll(".upgrade")) {
-        if (!e.classList.contains("disabled")) {
-            e.remove()
-        };
-    };*/
-
+function initUpgrades() {
     fetch("upgrades.json")
         .then(response => response.json())
         .then(data => {
@@ -361,21 +359,55 @@ function getBigPrice(stringPrice) {
 }
 
 function upgradeClick(event) {
-    const compare = getBigPrice(event.currentTarget.dataset.price)
+    let me = event.currentTarget
+
+    const compare = getBigPrice(me.dataset.price)
     console.log(compare)
     if (energy >= compare || devMode) {
-        energy -= compare
-        updateCounter()
+        energy -= compare;
+        updateCounter();
 
-        const id = event.currentTarget.dataset.id
+        const id = me.dataset.id;
 
         if (Object.hasOwn(upgradeOwned, id)) {
-            upgradeOwned[id] += 1
+            upgradeOwned[id] += 1;
         } else {
-            upgradeOwned[id] = 1
+            upgradeOwned[id] = 1;
+        };
+
+        if (upgradeOwned[id] >= Number(me.dataset.levelcount)) {
+            if (me.dataset.unlocks) {
+                const unlock_up = JSON.parse(me.dataset.unlocks);
+                fetch("upgrades.json")
+                .then(response => response.json())
+                .then(data => {
+                    for (let i of unlock_up) {
+                        upgradeUnlocked.push(i);
+                        addUpgrade(data[i],i);
+                    };
+                }).catch(err => console.error(err));
+            };
+
+            upgradeUnlocked.pop(id);
+            me.remove();
+        } else {
+            const newLVL = levelTypes[upgradeOwned[id]]
+            me.dataset.level = newLVL
+            me.querySelector("p").innerHTML = newLVL
+            me.querySelector(".upgrade-bg").src = `assets/img/upgrade templates/${Number(me.dataset.tier) + upgradeOwned[id]}.svg`
         }
 
-        console.log(upgradeOwned)
+        const variable = me.dataset.var
+        const value = Number(me.dataset.value)
+        const change = me.dataset.change
+
+        if (change === "true") {
+            upgradeStat[variable] += value
+            console.log("Changed",variable,"by",value,"(now",upgradeStat[variable],")")
+        } else {
+            upgradeStat[variable] = value
+            console.log("Set",variable,"to",value)
+        }
 
         buySFX.currentTime = 0;
         buySFX.play();
@@ -393,4 +425,4 @@ document.addEventListener("mouseup", () => {
 });
 
 updateDonut();
-updateUpgrades();
+initUpgrades();
