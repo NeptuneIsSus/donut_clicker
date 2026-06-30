@@ -54,6 +54,9 @@ let upgradeStat = {
 
 const DirDonutSprites = "assets/img/donuts/"
 
+let dictUPGRADE = {}
+let dictDONUT = {}
+
 function clamp(value, min, max) {
     return Math.min(Math.max(value, min), max)
 };
@@ -156,43 +159,36 @@ function updateDonut() {
     nextDonutNumber.innerHTML = nextDonut + 1;
     nextDonutPriceTag.innerHTML = formatNumber(nextDonutPrice);
 
-    fetch("donuts.json")
-        .then(response => response.json())
-        .then(data => {
-            const curSprite = data[currentDonut]["file"]
-            const nxtSprite = data[nextDonut]["file"]
-            const nxtName = data[nextDonut]["name"]
-            const nxtDesc = data[nextDonut]["description"]
-            const nxtFont = data[nextDonut]["font"]
-            const nxtFormalFont = `opt${nxtFont}, sans-serif`
+    const curSprite = dictDONUT[currentDonut]["file"];
+    const nxtSprite = dictDONUT[nextDonut]["file"];
+    const nxtName = dictDONUT[nextDonut]["name"];
+    const nxtDesc = dictDONUT[nextDonut]["description"];
+    const nxtFont = dictDONUT[nextDonut]["font"];
+    const nxtFormalFont = `opt${nxtFont}, sans-serif`;
 
-            //console.log("Donut font:",nxtFont,", Full font:", nxtFormalFont)
+    //console.log("Donut font:",nxtFont,", Full font:", nxtFormalFont)
 
-            donutSprite.src = DirDonutSprites + curSprite + ".svg";
-            nextDonutSprite.src = DirDonutSprites + nxtSprite + ".svg";
-            nextDonutName.textContent = nxtName;
-            nextDonutName.style.fontFamily = nxtFormalFont
-            nextDonutDescription.textContent = nxtDesc;
+    donutSprite.src = DirDonutSprites + curSprite + ".svg";
+    nextDonutSprite.src = DirDonutSprites + nxtSprite + ".svg";
+    nextDonutName.textContent = nxtName;
+    nextDonutName.style.fontFamily = nxtFormalFont
+    nextDonutDescription.textContent = nxtDesc;
 
-            let tmpSize = 100;
-            nextDonutName.style.fontSize = `${tmpSize}px`;
+    let tmpSize = 100;
+    nextDonutName.style.fontSize = `${tmpSize}px`;
 
-            while ((nextDonutName.scrollWidth > nextDonutName.clientWidth ||
-                nextDonutName.scrollHeight > nextDonutName.clientHeight) && tmpSize > 1) {
-                tmpSize -= 5;
-                nextDonutName.style.fontSize = `${tmpSize}px`;
-            };
-        }).catch(err => console.error(err));
+    while ((nextDonutName.scrollWidth > nextDonutName.clientWidth ||
+        nextDonutName.scrollHeight > nextDonutName.clientHeight) && tmpSize > 1) {
+        tmpSize -= 5;
+        nextDonutName.style.fontSize = `${tmpSize}px`;
+    };
 };
 
 function initUpgrades() {
-    fetch("upgrades.json")
-        .then(response => response.json())
-        .then(data => {
-            for (let i of upgradeUnlocked) {
-                addUpgrade(data[i],i)
-            };
-        }).catch(err => console.error(err));
+    for (let i of upgradeUnlocked) {
+        addUpgrade(dictUPGRADE[i],i);
+    };
+    
 };
 
 function closeMenu(menu) {
@@ -378,14 +374,11 @@ function upgradeClick(event) {
         if (upgradeOwned[id] >= Number(me.dataset.levelcount)) {
             if (me.dataset.unlocks) {
                 const unlock_up = JSON.parse(me.dataset.unlocks);
-                fetch("upgrades.json")
-                .then(response => response.json())
-                .then(data => {
-                    for (let i of unlock_up) {
-                        upgradeUnlocked.push(i);
-                        addUpgrade(data[i],i);
-                    };
-                }).catch(err => console.error(err));
+                
+                for (let i of unlock_up) {
+                    upgradeUnlocked.push(i);
+                    addUpgrade(dictUPGRADE[i],i);
+                };
             };
 
             upgradeUnlocked.pop(id);
@@ -424,5 +417,17 @@ document.addEventListener("mouseup", () => {
     mouseDown = false;
 });
 
-updateDonut();
-initUpgrades();
+
+fetch("upgrades.json")
+    .then(response => response.json())
+    .then(data => {
+        dictUPGRADE = data;
+        initUpgrades();
+}).catch(err => console.error(err));
+
+fetch("donuts.json")
+    .then(response => response.json())
+    .then(data => {
+        dictDONUT = data;
+        updateDonut();
+}).catch(err => console.error(err));
