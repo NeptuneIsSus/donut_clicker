@@ -1,61 +1,102 @@
-let donutElement = document.querySelector(".donut");;
-let donutSprite = document.querySelector(".donut img");
-let x;
-let y;
-
-donutRandomPosition();
-let clickSFX = document.querySelector(".click-sfx");
-
-let energy = 0n;
-let energyElement = document.querySelector(".energy-text");
-
-let currentDonut = 0;
-let nextDonutPrice = 25n;
 let nextDonutPriceTag = document.getElementById("donutPriceTag");
 let nextDonutSprite = document.querySelector(".donut-image img");
 let nextDonutNumber = document.getElementById("donutNumber");
 let nextDonutName = document.querySelector(".donut-info h2");
 let nextDonutDescription = document.querySelector(".donut-image p");
 let donutPurchase = document.querySelector(".donut-info button");
-
 let openMenuSFX = document.querySelector(".open-menu-sfx");
 let closeMenuSFX = document.querySelector(".close-menu-sfx");
-
+let donutElement = document.querySelector(".donut");;
+let donutSprite = document.querySelector(".donut img");
+let energyElement = document.querySelector(".energy-text");
+let clickSFX = document.querySelector(".click-sfx");
 let buySFX = document.querySelector(".buy-sfx");
 let poorSFX = document.querySelector(".poor-sfx");
 let hoverSFX = document.querySelector(".hover-sfx")
-
-let devMode = false;
 let devButton = document.querySelector(".dev-mode");
-
 let originalUpgrade = document.querySelector(".upgrade");
 let upgrid = document.querySelector(".upgrid");
-const levelTypes = ["I","II","III","IV","V"];
-
 let upgradeName = document.querySelector(".upgrade-name");
 let upgradePrice = document.querySelector(".upgrade-price");
 let upgradeLevel = document.querySelector(".upgrade-level");
 let upgradeDescription = document.querySelector(".upgrade-description");
 
+const levelTypes = ["I","II","III","IV","V"];
+const DirDonutSprites = "assets/img/donuts/"
+let dictUPGRADE = {}
+let dictDONUT = {}
 let mouseDown = false;
+let devMode = false;
 
-let upgradeOwned = {}
-let upgradeUnlocked = [0,1,2,4,8,11]
+
+
 let upgradeStat = {
     "clickType": 0, // 1 hold down mouse, 2 no click required
     "doubleChance": 0.0, // 0.0-1.0 double clicks, 1.0-2.0 triple clicks
     "homesickChance": 0.0, // 0.0-1.0 close chance, 1.0-2.0 rock chance
     "stormCharge": 100,
     "stormClicks": 0,
-    "diceChance": 1,
+    "diceChance": 0,
     "diceClickChance": 0.0,
-    "donutSale": 1.0
+    "donutSale": 0.0
 };
 
-const DirDonutSprites = "assets/img/donuts/"
+let energy = 0n;
+let nextDonutPrice = 0n;
+let currentDonut = 0;
+let upgradeOwned = {};
+let upgradeUnlocked = [];
 
-let dictUPGRADE = {}
-let dictDONUT = {}
+function newGame() {
+    upgradeUnlocked = [0,1,2,4,8,11];
+    nextDonutPrice = 25n;
+    upgradeStat["stormCharge"] = 0;
+    upgradeStat["diceChance"] = 1;
+    upgradeStat["donutSale"] = 1.0;
+}
+
+function loadGame() {
+    if (!window.IS_PYWEBVIEW) {
+        return
+    };
+
+    window.pywebview.api.has_save().then(response => {
+        console.log("Save successful!")
+        
+
+        console.log("Save detected! Now loading...")
+
+        window.pywebview.api.load_game().then(response => {
+            console.log("Save successful!")
+        });
+    });
+}
+
+function saveGame () {
+    let savedata = {}
+    savedata["energy"] = energy.toString();
+    savedata["nextDonutPrice"] = nextDonutPrice.toString();
+    savedata["currentDonut"] = currentDonut;
+    savedata["upgradeOwned"] = upgradeOwned;
+    savedata["upgradeUnlocked"] = upgradeUnlocked;
+    savedata["upgradeStat"] = upgradeStat;
+
+    if (window.IS_PYWEBVIEW) {
+        console.log("Saving game to AppData")
+        window.pywebview.api.save_game(savedata).then(response => {
+            console.log("Save successful!")
+        })
+    } else {
+        console.log("Saving game as a standalone file")
+        const blob = new Blob([JSON.stringify(data, null, 2)], {
+            type: "application/json"
+        });
+
+        const url = URL.createObjectURL(blob);
+    };
+};
+
+
 
 function clamp(value, min, max) {
     return Math.min(Math.max(value, min), max)
@@ -198,20 +239,11 @@ function closeMenu(menu) {
 };
 
 function donutRandomPosition() {
-    const offsetWidth = donutSprite.width / 2
-    const offsetHeight = donutSprite.height / 2
+    let x = Math.random() * 100
+    let y = Math.random() * 100
 
-    x = Math.random() * (window.innerWidth - offsetWidth);
-    y = Math.random() * (window.innerHeight - offsetHeight);
-
-    const clampX = offsetWidth * 3
-    const clampY = offsetHeight * 3
-
-    x = clamp(x, clampX, window.innerWidth - clampX)
-    y = clamp(y, clampY, window.innerHeight - clampY)
-
-    donutElement.style.left = `${x}px`;
-    donutElement.style.top = `${y}px`;
+    donutElement.style.left = `${x}%`;
+    donutElement.style.top = `${y}%`;
 };
 
 function clickDonut() {
@@ -431,3 +463,5 @@ fetch("donuts.json")
         dictDONUT = data;
         updateDonut();
 }).catch(err => console.error(err));
+
+donutRandomPosition();
