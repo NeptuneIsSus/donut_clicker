@@ -48,6 +48,8 @@ let upgradeOwned = {};
 let upgradeUnlocked = [];
 
 function newGame() {
+    console.log("Creating new game");
+
     upgradeUnlocked = [0,1,2,4,8,11];
     nextDonutPrice = 25n;
     upgradeStat["stormCharge"] = 0;
@@ -60,11 +62,15 @@ function loadGame() {
         return
     };
 
-    window.pywebview.api.has_save().then(response => {
-        console.log("Save successful!")
+    window.pywebview.api.has_save().then(result => {
+        console.log("Save successful!");
         
+        if (result) {
+            newGame();
+            return;
+        };
 
-        console.log("Save detected! Now loading...")
+        console.log("Save detected! Now loading...");
 
         window.pywebview.api.load_game().then(response => {
             console.log("Save successful!")
@@ -450,6 +456,7 @@ document.addEventListener("mouseup", () => {
 });
 
 
+
 fetch("upgrades.json")
     .then(response => response.json())
     .then(data => {
@@ -464,4 +471,5 @@ fetch("donuts.json")
         updateDonut();
 }).catch(err => console.error(err));
 
+newGame();
 donutRandomPosition();
