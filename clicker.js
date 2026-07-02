@@ -503,13 +503,13 @@ async function fetchDonut() {
     }
 }
 
-setTimeout(async () => {
-    await loadGame();
-    await fetchDonut();
-    await fetchUpgrade();
-    updateDonut();
-    initUpgrades();
-    updateCounter();
-    donutRandomPosition();
-    console.log("ready!");
-}, 200);
+
+
+await loadGame();
+await fetchDonut();
+await fetchUpgrade();
+updateDonut();
+initUpgrades();
+updateCounter();
+donutRandomPosition();
+console.log("ready!");

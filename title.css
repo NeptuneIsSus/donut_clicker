@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "Button";
+    src: url(assets/fonts/Aldrich-Regular.ttf);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title {
+    font-size: min(10vw, 10vh);
+}
+
+.icon {
+    width: min(30vw,25vh);
+}
+
+.buttons button {
+    width: 17.5vw;
+    height: 10vh;
+    border: solid 0.8vw;
+    font-size: 2.5vw;
+    font-family: "Button", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 2vw;
+}
+
+.buttons button:hover {
+    scale: 1.1;
+}
+
+.buttons button:active {
+    scale: 1.0;
+}
+
+.btn-new {
+    background-color: #ff7f7f;
+    border: #6b0000;
+    color: #6b0000;
+}
+
+.btn-load {
+    background-color: #ffca80;
+    border: #6b3e00;
+    color: #6b3e00;
+}
+
+.btn-sett {
+    background-color: #99ff80;
+    border: #156b00;
+    color: #156b00;
+}
+
+.btn-quit {
+    background-color: #80d9ff;
+    border: #004b6b;
+    color: #004b6b;
+}
+
+.menu-box-color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 100px);
+    height: calc(100% - 100px);
+    margin: 40px;
+    border: solid;
+    border-width: 10px;
+}
+
+.menu-box-color h1 {
+    font-size: 100px;
+    margin: 0;
+}
+
+.loadCoded {
+    background-color: #ffca80;
+    border-color: #6b3e00;
+    color: #6b3e00;
+}

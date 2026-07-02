@@ -4,7 +4,7 @@ import os
 import json
 import asyncio
 
-html = Path("clicker.html").resolve()
+html = Path("title.html").resolve()
 
 appdata_env = os.getenv("LOCALAPPDATA")
 if appdata_env is None:
