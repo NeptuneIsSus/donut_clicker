@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donut Clicker</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="clicker.css">
     <link rel="shortcut icon" href="assets/img/donuts/donuty.svg" type="image/png">
 </head>
 
@@ -18,6 +18,7 @@
     <audio src="assets/sfx/buy.wav" class="buy-sfx"></audio>
     <audio src="assets/sfx/poor.wav" class="poor-sfx"></audio>
     <audio src="assets/sfx/hover.wav" class="hover-sfx"></audio>
+    <audio src="assets/sfx/save.wav" class="save-sfx"></audio>
     
     <section class="energy">
         <h1 class="energy-text">0</h1>
@@ -54,6 +55,7 @@
     <section id="settingsBox" class="menu-box">
         <div class="settingsCoded menu-box-color">
             <button class="dev-mode" onclick="toggleDevMode()"><b>Dev Mode</b></button>
+            <button class="save-button" onclick="saveGame()"><b>Save</b></button>
             <button class="menu-return settingsCoded"><b>Back</b></button>
         </div>
     </section>
@@ -107,7 +109,7 @@
         <img src="assets/img/donuts/donut.svg" alt="" srcset="" onclick="clickDonut()" onmouseenter="donutHover()" draggable="false">
     </div>
 
-    <script src="index.js"></script>
+    <script src="clicker.js"></script>
 </body>
 
 </html>

@@ -12,7 +12,8 @@ let energyElement = document.querySelector(".energy-text");
 let clickSFX = document.querySelector(".click-sfx");
 let buySFX = document.querySelector(".buy-sfx");
 let poorSFX = document.querySelector(".poor-sfx");
-let hoverSFX = document.querySelector(".hover-sfx")
+let hoverSFX = document.querySelector(".hover-sfx");
+let saveSFX = document.querySelector(".save-sfx");
 let devButton = document.querySelector(".dev-mode");
 let originalUpgrade = document.querySelector(".upgrade");
 let upgrid = document.querySelector(".upgrid");
@@ -47,6 +48,31 @@ let currentDonut = 0;
 let upgradeOwned = {};
 let upgradeUnlocked = [];
 
+function getState() {
+    let data = {}
+    data["energy"] = energy.toString();
+    data["nextDonutPrice"] = nextDonutPrice.toString();
+    data["currentDonut"] = currentDonut;
+    data["upgradeOwned"] = upgradeOwned;
+    data["upgradeUnlocked"] = upgradeUnlocked;
+    data["upgradeStat"] = upgradeStat;
+    return data;
+}
+function setState(data) {
+    energy = BigInt(data["energy"]);
+    nextDonutPrice = BigInt(data["nextDonutPrice"]);
+    currentDonut = data["currentDonut"];
+    upgradeOwned = data["upgradeOwned"];
+    upgradeUnlocked = data["upgradeUnlocked"];
+    upgradeStat = data["upgradeStat"];
+}
+function syncStateToPython() {
+    if (window.IS_PYWEBVIEW === false) {
+        return
+    }
+    window.pywebview.api.updateState(getState());
+}
+
 function newGame() {
     console.log("Creating new game");
 
@@ -55,51 +81,48 @@ function newGame() {
     upgradeStat["stormCharge"] = 0;
     upgradeStat["diceChance"] = 1;
     upgradeStat["donutSale"] = 1.0;
-}
+};
 
-function loadGame() {
-    if (!window.IS_PYWEBVIEW) {
-        return
+async function loadGame() {
+    if (window.IS_PYWEBVIEW === false) {
+        console.log("PYWEBVIEW NOT DETECTED");
+        newGame();
+        return;
     };
 
-    window.pywebview.api.has_save().then(result => {
+    const has_save = await window.pywebview.api.has_save("clicker");
+    if (!has_save) {
+        console.log("No save detected");
+        newGame();
+        return;
+    };
+    console.log("Save detected! Now loading...");
+
+    const savedata = await window.pywebview.api.load_game("clicker")
+    console.log("Found save data:",savedata);
+    setState(savedata);
+
+    console.log("Successfully loaded save!");
+};
+
+async function saveGame () {
+    let savedata = getState();
+
+    if (window.IS_PYWEBVIEW === true) {
+        console.log("Saving game to AppData");
+        await window.pywebview.api.save_game(savedata, "clicker");
         console.log("Save successful!");
-        
-        if (result) {
-            newGame();
-            return;
-        };
-
-        console.log("Save detected! Now loading...");
-
-        window.pywebview.api.load_game().then(response => {
-            console.log("Save successful!")
-        });
-    });
-}
-
-function saveGame () {
-    let savedata = {}
-    savedata["energy"] = energy.toString();
-    savedata["nextDonutPrice"] = nextDonutPrice.toString();
-    savedata["currentDonut"] = currentDonut;
-    savedata["upgradeOwned"] = upgradeOwned;
-    savedata["upgradeUnlocked"] = upgradeUnlocked;
-    savedata["upgradeStat"] = upgradeStat;
-
-    if (window.IS_PYWEBVIEW) {
-        console.log("Saving game to AppData")
-        window.pywebview.api.save_game(savedata).then(response => {
-            console.log("Save successful!")
-        })
     } else {
-        console.log("Saving game as a standalone file")
+        console.log("Saving game as a standalone file");
         const blob = new Blob([JSON.stringify(data, null, 2)], {
             type: "application/json"
         });
 
         const url = URL.createObjectURL(blob);
     };
+
+    saveSFX.currentTime = 0;
+    saveSFX.play();
 };
 
 
@@ -198,6 +221,8 @@ function updateCounter() {
 
     energyElement.style.transitionDuration = holdDuration
     energyElement.style.fontSize = holdFontSize
+
+    syncStateToPython()
 };
 
 function updateDonut() {
@@ -457,19 +482,34 @@ document.addEventListener("mouseup", () => {
 
 
 
-fetch("upgrades.json")
-    .then(response => response.json())
-    .then(data => {
-        dictUPGRADE = data;
-        initUpgrades();
-}).catch(err => console.error(err));
+async function fetchUpgrade() {
+    console.log("Fetching Upgrades...")
+    try {
+        const fetched = await fetch("upgrades.json");
+        dictUPGRADE = await fetched.json();
+        console.log("Successfully cached Upgrades!")
+    } catch (err) {
+        console.log(err);
+    }
+}
+async function fetchDonut() {
+    console.log("Fetching Donuts...")
+    try {
+        const fetched = await fetch("donuts.json");
+        dictDONUT = await fetched.json();
+        console.log("Successfully cached Donuts!")
+    } catch (err) {
+        console.log(err);
+    }
+}
 
-fetch("donuts.json")
-    .then(response => response.json())
-    .then(data => {
-        dictDONUT = data;
-        updateDonut();
-}).catch(err => console.error(err));
-
-newGame();
-donutRandomPosition();
+setTimeout(async () => {
+    await loadGame();
+    await fetchDonut();
+    await fetchUpgrade();
+    updateDonut();
+    initUpgrades();
+    updateCounter();
+    donutRandomPosition();
+    console.log("ready!");
+}, 200);

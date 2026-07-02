@@ -2,8 +2,9 @@ import webview
 from pathlib import Path
 import os
 import json
+import asyncio
 
-html = Path("index.html").resolve()
+html = Path("clicker.html").resolve()
 
 appdata_env = os.getenv("LOCALAPPDATA")
 if appdata_env is None:
@@ -13,25 +14,39 @@ appdata = Path(appdata_env) / "DonutClicker"
 appdata.mkdir(parents=True, exist_ok=True)
 
 class Api:
-    def has_save(self):
-        save_file = appdata / "save.json"
+    def __init__(self):
+        self.latest_state = None
+
+    def updateState(self, state):
+        print("auto: storing current state")
+        self.latest_state = state
+
+    def has_save(self, file:str, slot:str="autosave"):
+        print(f"Checking for save {slot}/{file}.json")
+        save_file = appdata / slot / f"save-{file}.json"
         if save_file.is_file():
+            print(f"Had save at {slot}/{file}.json")
             return True
+        print(f"{file}.json was not found in {slot}/")
         return False
 
-    def load_game(self):
-        save_file = appdata / "save.json"
+    def load_game(self, file:str, slot:str="autosave"):
+        save_file = appdata / slot / f"save-{file}.json"
 
-        with open(save_file, "r") as file:
-            data = json.load(file)
+        with open(save_file, "r") as f:
+            data = json.load(f)
         
+        print(f"Loading save {file}.json from {slot}/")
+        print(data)
         return data
 
-    def save_game(self, data:dict):
-        save_file = appdata / "slot 1" / "save.json"
+    def save_game(self, data:dict, file:str, slot:str="autosave"):
+        save_dir = appdata / slot
+        save_dir.mkdir(parents=True, exist_ok=True)
+        save_file = save_dir / f"save-{file}.json"
 
-        with open(save_file, "w") as file:
-            json.dump(data, file, indent=4)
+        with open(save_file, "w") as f:
+            json.dump(data, f, indent=4)
 
 api = Api()
 
@@ -45,7 +60,20 @@ window = webview.create_window(
     js_api=api
 )
 
-def on_loaded(window):
-    window.evaluate_js("window.IS_PYWEBVIEW = true;") # type: ignore
+def create_handlers(win):
+    def on_loaded():
+        win.evaluate_js("window.IS_PYWEBVIEW = true;") # type: ignore
 
-webview.start(on_loaded,window) # type: ignore
+    def on_closing():
+        print("AAAAAAAAAAAAAAAA")
+
+        grab_state = api.latest_state
+
+        if not grab_state == None:
+            api.save_game(grab_state,"clicker","autosave")
+
+    win.events.loaded += on_loaded # type: ignore
+    win.events.closing += on_closing # type: ignore
+
+create_handlers(window)
+webview.start(debug=True) # type: ignore
