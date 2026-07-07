@@ -1,37 +1,40 @@
 let hoverSFX = document.querySelector(".hover-sfx");
 let openSFX = document.querySelector(".open-sfx");
 let closeSFX = document.querySelector(".close-sfx");
-let loadMenu
-let settMenu
+let loadMenu = document.getElementById("loadBox")
+let settMenu = document.getElementById("settBox")
 
 function btnHover() {
     hoverSFX.currentTime = 0;
     hoverSFX.play();
 }
 
-function openNew() {
-    openSFX.currentTime = 0;
-    openSFX.play();
-}
-
 function openLoad() {
-    //loadMenu.classList.remove("closed")
+    loadMenu.classList.add("active")
 
     openSFX.currentTime = 0;
     openSFX.play();
 }
 
 function openSettings() {
-    //settMenu.classList.remove("closed")
+    settMenu.classList.add("active")
 
     openSFX.currentTime = 0;
     openSFX.play();
 }
 
 function closeMenu() {
-    /*loadMenu.classList.add("closed")
-    settMenu.classList.add("closed")
+    loadMenu.classList.remove("active")
+    settMenu.classList.remove("active")
 
     closeSFX.currentTime = 0;
-    closeSFX.play();*/
+    closeSFX.play();
+}
+
+function quit() {
+    if (window.IS_PYWEBVIEW === false) {
+        window.close()
+    } else {
+        window.pywebview.api.kill()
+    }
 }

@@ -2,7 +2,7 @@ import webview
 from pathlib import Path
 import os
 import json
-import asyncio
+import sys
 
 html = Path("title.html").resolve()
 
@@ -47,6 +47,10 @@ class Api:
 
         with open(save_file, "w") as f:
             json.dump(data, f, indent=4)
+
+    def kill(self):
+        print("KILL ME NOW")
+        window.destroy() # type: ignore
 
 api = Api()
 

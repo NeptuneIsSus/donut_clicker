@@ -15,28 +15,35 @@
         <h1 class="title">Donut Clicker</h1>
         <img src="assets/img/donuts/donut.svg" alt="title icon" srcset="" class="icon" draggable="true">
         <div class="buttons">
-            <button onmouseenter="btnHover()" class="btn-new" onclick="openNew()"><b>New Game</b></button>
+            <button onmouseenter="btnHover()" class="btn-new"><b><a href="clicker.html">New Game</a></b></button>
             <button onmouseenter="btnHover()" class="btn-load" onclick="openLoad()"><b>Load Game</b></button>
             <button onmouseenter="btnHover()" class="btn-sett" onclick="openSettings()"><b>Settings</b></button>
-            <button onmouseenter="btnHover()" class="btn-quit" onclick="window.close()"><b>Quit</b></button>
+            <button onmouseenter="btnHover()" class="btn-quit" onclick="quit()"><b>Quit</b></button>
         </div>
     </section>
 
 
 
     <section id="loadBox" class="menu-box">
-        <div class="loadCoded menu-box-color">
+        <div class="btn-load menu-box-color">
             <div class="load-arrange">
                 <h1>Saves:</h1>
                 <p>1</p>
                 <p>2</p>
             </div>
-            <button class="menu-return loadCoded"><b>Back</b></button>
+            <button class="menu-return btn-load" onclick="closeMenu()"><b>Back</b></button>
         </div>
     </section>
 
-    <section class="settings-menu">
-        <h1>Settings:</h1>
+    <section id="settBox" class="menu-box">
+        <div class="btn-sett menu-box-color">
+            <div class="sett-arrange">
+                <h1>Settings:</h1>
+                <p>1</p>
+                <p>2</p>
+            </div>
+            <button class="menu-return btn-sett" onclick="closeMenu()"><b>Back</b></button>
+        </div>
     </section>
 
 
