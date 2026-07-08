@@ -38,3 +38,15 @@ function quit() {
         window.pywebview.api.kill()
     }
 }
+
+function newGame() {
+    window.location.href = "clicker.html"
+}
+
+
+
+async function startup() {
+    await window.pywebview.api.get_save_list(false)
+}
+
+window.addEventListener("pywebviewready", startup)

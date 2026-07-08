@@ -52,6 +52,15 @@ class Api:
         print("KILL ME NOW")
         window.destroy() # type: ignore
 
+    def get_save_list(self, include_autosave=True):
+        saves = appdata.iterdir()
+        savenames = []
+        for i in saves:
+            savenames.append(i.name)
+        if savenames.__contains__("autosave") and not include_autosave:
+            savenames.remove("autosave")
+        print(savenames)
+
 api = Api()
 
 window = webview.create_window(
@@ -69,7 +78,7 @@ def create_handlers(win):
         win.evaluate_js("window.IS_PYWEBVIEW = true;") # type: ignore
 
     def on_closing():
-        print("AAAAAAAAAAAAAAAA")
+        print("CLOSEEEE")
 
         grab_state = api.latest_state
 

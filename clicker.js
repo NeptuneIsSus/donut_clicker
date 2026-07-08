@@ -83,14 +83,14 @@ function newGame() {
     upgradeStat["donutSale"] = 1.0;
 };
 
-async function loadGame() {
+async function loadGame(savename="autosave") {
     if (window.IS_PYWEBVIEW === false) {
         console.log("PYWEBVIEW NOT DETECTED");
         newGame();
         return;
     };
 
-    const has_save = await window.pywebview.api.has_save("clicker");
+    const has_save = await window.pywebview.api.has_save("clicker", savename);
     if (!has_save) {
         console.log("No save detected");
         newGame();
@@ -98,7 +98,7 @@ async function loadGame() {
     };
     console.log("Save detected! Now loading...");
 
-    const savedata = await window.pywebview.api.load_game("clicker")
+    const savedata = await window.pywebview.api.load_game("clicker", savename)
     console.log("Found save data:",savedata);
     setState(savedata);
 
@@ -505,11 +505,20 @@ async function fetchDonut() {
 
 
 
-await loadGame();
-await fetchDonut();
-await fetchUpgrade();
-updateDonut();
-initUpgrades();
-updateCounter();
-donutRandomPosition();
-console.log("ready!");
+async function startup() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("save")) {
+        await loadGame(params.get("save"));
+    } else {
+        newGame();
+    };
+    await fetchDonut();
+    await fetchUpgrade();
+    updateDonut();
+    initUpgrades();
+    updateCounter();
+    donutRandomPosition();
+    console.log("ready!");
+}
+
+window.addEventListener("pywebviewready", startup)
