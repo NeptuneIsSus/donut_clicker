@@ -508,7 +508,9 @@ async function fetchDonut() {
 async function startup() {
     const params = new URLSearchParams(window.location.search);
     if (params.has("save")) {
-        await loadGame(params.get("save"));
+        const save = params.get("save")
+        console.log("Loading Save:",save)
+        await loadGame(save);
     } else {
         newGame();
     };

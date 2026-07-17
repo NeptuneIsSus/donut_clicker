@@ -59,7 +59,7 @@ class Api:
             savenames.append(i.name)
         if savenames.__contains__("autosave") and not include_autosave:
             savenames.remove("autosave")
-        print(savenames)
+        return savenames
 
 api = Api()
 

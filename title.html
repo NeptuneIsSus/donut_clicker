@@ -10,6 +10,7 @@
     <audio src="assets/sfx/hover2.wav" class="hover-sfx"></audio>
     <audio src="assets/sfx/open.wav" class="open-sfx"></audio>
     <audio src="assets/sfx/close.wav" class="close-sfx"></audio>
+    <audio src="assets/bgm/start game.mp3" class="start-sfx"></audio>
 
     <section class="main">
         <h1 class="title">Donut Clicker</h1>
@@ -27,9 +28,20 @@
     <section id="loadBox" class="menu-box">
         <div class="btn-load menu-box-color">
             <div class="load-arrange">
-                <h1>Saves:</h1>
-                <p>1</p>
-                <p>2</p>
+                <div class="save disabled">
+                    <img src="assets/img/donuts/donut.svg" alt="save icon" srcset="" class="save-img">
+                    <img src="assets/img/ui/die1.svg" alt="prestige icon" srcset="" class="save-prestige">
+                    <div class="save-stat">
+                        <p class="save-name">Slot 0</p>
+                        <p>Donut #<span class="save-donut">152</span></p>
+                        <p>Achievements: <span class="save-achievements">59</span>/213</p>
+                    </div>
+                    <div class="save-time">
+                        <p>Progress: <span class="save-progress">100</span>%</p>
+                        <p>P Time - <span class="save-time-p">00:02:17:56.08</span></p>
+                        <p>G Time - <span class="save-time-g">00:11:39:12.43</span></p>
+                    </div>
+                </div>
             </div>
             <button class="menu-return btn-load" onclick="closeMenu()"><b>Back</b></button>
         </div>
