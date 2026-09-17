@@ -485,7 +485,7 @@ document.addEventListener("mouseup", () => {
 async function fetchUpgrade() {
     console.log("Fetching Upgrades...")
     try {
-        const fetched = await fetch("upgrades.json");
+        const fetched = await fetch("reference/upgrades.json");
         dictUPGRADE = await fetched.json();
         console.log("Successfully cached Upgrades!")
     } catch (err) {
@@ -495,7 +495,7 @@ async function fetchUpgrade() {
 async function fetchDonut() {
     console.log("Fetching Donuts...")
     try {
-        const fetched = await fetch("donuts.json");
+        const fetched = await fetch("reference/donuts.json");
         dictDONUT = await fetched.json();
         console.log("Successfully cached Donuts!")
     } catch (err) {

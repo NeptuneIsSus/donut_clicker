@@ -1,10 +1,10 @@
 @font-face {
     font-family: "Button";
-    src: url(assets/fonts/Aldrich-Regular.ttf);
+    src: url(../assets/fonts/Aldrich-Regular.ttf);
 }
 @font-face {
     font-family: "Info";
-    src: url(assets/fonts/BlackOpsOne-Regular.ttf);
+    src: url(../assets/fonts/BlackOpsOne-Regular.ttf);
 }
 
 body {
@@ -103,18 +103,6 @@ body {
 .menu-box-color h1 {
     font-size: 100px;
     margin: 0;
-}
-
-.loadCoded {
-    background-color: #ffca807a;
-    border-color: #6b3e00;
-    color: #6b3e00;
-}
-
-.settCoded {
-    background-color: #ffca807a;
-    border-color: #6b3e00;
-    color: #6b3e00;
 }
 
 .menu-return {

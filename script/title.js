@@ -9,6 +9,8 @@ let settMenu = document.getElementById("settBox");
 let saveOG = document.querySelector(".save");
 let saveList = document.querySelector(".load-arrange")
 
+let dictDONUT = {}
+
 
 
 function toTitleCase(str) {
@@ -102,8 +104,21 @@ async function setupSaves() {
 
 
 
+async function fetchDonut() {
+    console.log("Fetching Donuts...")
+    try {
+        const fetched = await fetch("reference/donuts.json");
+        dictDONUT = await fetched.json();
+        console.log("Successfully cached Donuts!")
+    } catch (err) {
+        console.log(err);
+    }
+}
+
 async function startup() {
+    await fetchDonut();
     await setupSaves();
+    dictDONUT = {};
 }
 
 window.addEventListener("pywebviewready", startup);
